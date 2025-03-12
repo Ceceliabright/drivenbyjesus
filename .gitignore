@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Compiled source #
 ###################
 *.com
@@ -35,3 +36,6 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+=======
+node_modules
+>>>>>>> 2073825 (Initial commit for Total Wellness App, including frontend and backend)

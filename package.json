@@ -1,0 +1,15 @@
+{
+  "name": "total-wellness-app",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start --prefix frontend\" \"npm run mock-server --prefix backend\"",
+    "install-all": "npm install --prefix frontend && npm install --prefix backend"
+  },
+  "dependencies": {
+    "react-router-dom": "^6.30.0"
+  }
+}

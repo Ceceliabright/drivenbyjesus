@@ -1,0 +1,957 @@
+{
+  "prayers": [],
+  "gratitudes": [],
+  "users": [
+    {
+      "id": 1,
+      "username": "jane_doe",
+      "password": "hashed_password456",
+      "email": "jane@example.com",
+      "profileImage": "Image.jpg"
+    }
+  ],
+  "bibleVersesLove": [
+    {
+      "id": 1,
+      "verse": "For God so loved the world, that He gave His only Son, that whoever believes in Him should not perish but have eternal life.",
+      "reference": "John 3:16"
+    },
+    {
+      "id": 2,
+      "verse": "But God shows His love for us in that while we were still sinners, Christ died for us.",
+      "reference": "Romans 5:8"
+    },
+    {
+      "id": 3,
+      "verse": "In this the love of God was made manifest among us, that God sent His only Son into the world, so that we might live through Him. In this is love, not that we have loved God, but that He loved us and sent His Son to be the propitiation for our sins.",
+      "reference": "1 John 4:9-10"
+    },
+    {
+      "id": 4,
+      "verse": "For I am sure that neither death nor life, nor angels nor rulers, nor things present nor things to come, nor powers, nor height nor depth, nor anything else in all creation, will be able to separate us from the love of God in Christ Jesus our Lord.",
+      "reference": "Romans 8:38-39"
+    },
+    {
+      "id": 5,
+      "verse": "I have loved you with an everlasting love; therefore I have continued my faithfulness to you.",
+      "reference": "Jeremiah 31:3"
+    },
+    {
+      "id": 6,
+      "verse": "So that Christ may dwell in your hearts through faith—that you, being rooted and grounded in love, may have strength to comprehend with all the saints what is the breadth and length and height and depth, and to know the love of Christ that surpasses knowledge, that you may be filled with all the fullness of God.",
+      "reference": "Ephesians 3:17-19"
+    },
+    {
+      "id": 7,
+      "verse": "Give thanks to the God of heaven, for His steadfast love endures forever.",
+      "reference": "Psalm 136:26"
+    },
+    {
+      "id": 8,
+      "verse": "For the mountains may depart and the hills be removed, but my steadfast love shall not depart from you, and my covenant of peace shall not be removed,” says the Lord, who has compassion on you.",
+      "reference": "Isaiah 54:10"
+    },
+    {
+      "id": 9,
+      "verse": "The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you; in His love He will no longer rebuke you, but will rejoice over you with singing.",
+      "reference": "Zephaniah 3:17"
+    },
+    {
+      "id": 10,
+      "verse": "The Lord your God is in your midst, a mighty one who will save; He will rejoice over you with gladness; He will quiet you by His love; He will exult over you with loud singing.",
+      "reference": "Zephaniah 3:17"
+    },
+    {
+      "id": 11,
+      "verse": "For the mountains may depart and the hills be removed, but my steadfast love shall not depart from you, and my covenant of peace shall not be removed,” says the Lord, who has compassion on you.",
+      "reference": "Isaiah 54:10"
+    },
+    {
+      "id": 12,
+      "verse": "And we have come to know and to believe the love that God has for us. God is love, and anyone who remains in love remains in God, and God remains in them.",
+      "reference": "1 John 4:16"
+    },
+    {
+      "id": 13,
+      "verse": "For God so loved the world, that He gave His only Son, that whoever believes in Him should not perish but have eternal life.",
+      "reference": "John 3:16"
+    },
+    {
+      "id": 14,
+      "verse": "But God shows His love for us in that while we were still sinners, Christ died for us.",
+      "reference": "Romans 5:8"
+    },
+    {
+      "id": 15,
+      "verse": "In this is love: not that we have loved God, but that He loved us and sent His Son to be the propitiation for our sins.",
+      "reference": "1 John 4:10"
+    },
+    {
+      "id": 16,
+      "verse": "We love because He first loved us.",
+      "reference": "1 John 4:19"
+    },
+    {
+      "id": 17,
+      "verse": "The Lord appeared to us in the past, saying: “I have loved you with an everlasting love; I have drawn you with unfailing kindness.",
+      "reference": "Jeremiah 31:3"
+    },
+    {
+      "id": 18,
+      "verse": "For I am sure that neither death nor life, nor angels nor rulers, nor things present nor things to come, nor powers, nor height nor depth, nor anything else in all creation, will be able to separate us from the love of God in Christ Jesus our Lord.",
+      "reference": "Romans 8:38-39"
+    },
+    {
+      "id": 19,
+      "verse": "So that Christ may dwell in your hearts through faith—that you, being rooted and grounded in love, may have strength to comprehend with all the saints what is the breadth and length and height and depth, and to know the love of Christ that surpasses knowledge, that you may be filled with all the fullness of God.",
+      "reference": "Ephesians 3:17-19"
+    },
+    {
+      "id": 20,
+      "verse": "I have loved you with an everlasting love; therefore I have continued my faithfulness to you.",
+      "reference": "Jeremiah 31:3"
+    },
+    {
+      "id": 21,
+      "verse": "He who did not spare His own Son but gave Him up for us all, how will He not also, along with Him, graciously give us all things?",
+      "reference": "Romans 8:32"
+    },
+    {
+      "id": 22,
+      "verse": "As the Father has loved me, so have I loved you. Abide in my love.",
+      "reference": "John 15:9"
+    },
+    {
+      "id": 23,
+      "verse": "The Lord has appeared of old to me, saying: “Yes, I have loved you with an everlasting love; therefore with lovingkindness I have drawn you.",
+      "reference": "Jeremiah 31:3"
+    },
+    {
+      "id": 24,
+      "verse": "Jesus replied, 'Love the Lord your God with all your heart and with all your soul and with all your mind.'",
+      "reference": "Matthew 22:37"
+    },
+    {
+      "id": 25,
+      "verse": "God is love. Whoever lives in love lives in God, and God in them.",
+      "reference": "1 John 4:16"
+    },
+    {
+      "id": 26,
+      "verse": "But the Lord takes pleasure in those who fear Him, in those who hope in His steadfast love.",
+      "reference": "Psalm 147:11"
+    },
+    {
+      "id": 27,
+      "verse": "The Lord is near to all who call on Him, to all who call on Him in truth.",
+      "reference": "Psalm 145:18"
+    },
+    {
+      "id": 28,
+      "verse": "Love the Lord your God with all your heart and with all your soul and with all your strength.",
+      "reference": "Deuteronomy 6:5"
+    },
+    {
+      "id": 29,
+      "verse": "You are precious in my sight, and honored, and I love you.",
+      "reference": "Isaiah 43:4"
+    },
+    {
+      "id": 30,
+      "verse": "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness.",
+      "reference": "Galatians 5:22"
+    },
+    {
+      "id": 31,
+      "verse": "Give thanks to the Lord, for He is good; His love endures forever.",
+      "reference": "Psalm 136:1"
+    },
+    {
+      "id": 32,
+      "verse": "My soul yearns for you in the night; in the morning my spirit longs for you.",
+      "reference": "Isaiah 26:9"
+    },
+    {
+      "id": 33,
+      "verse": "And this is love: that we walk in obedience to His commands. As you have heard from the beginning, His command is that you walk in love.",
+      "reference": "2 John 1:6"
+    },
+    {
+      "id": 34,
+      "verse": "And I will betroth you to me forever; I will betroth you to me in righteousness and justice, in love and compassion.",
+      "reference": "Hosea 2:19"
+    },
+    {
+      "id": 35,
+      "verse": "For the mountains may depart and the hills be removed, but my steadfast love shall not depart from you.",
+      "reference": "Isaiah 54:10"
+    },
+    {
+      "id": 36,
+      "verse": "Though the mountains be shaken and the hills be removed, yet my unfailing love for you will not be shaken, nor my covenant of peace be removed,” says the Lord, who has compassion on you.",
+      "reference": "Isaiah 54:10"
+    },
+    {
+      "id": 37,
+      "verse": "The Lord is gracious and righteous; our God is full of compassion.",
+      "reference": "Psalm 116:5"
+    },
+    {
+      "id": 38,
+      "verse": "For God so loved the world that He gave His one and only Son, that whoever believes in Him shall not perish but have eternal life.",
+      "reference": "John 3:16"
+    },
+    {
+      "id": 39,
+      "verse": "He is the atoning sacrifice for our sins, and not only for ours but also for the sins of the whole world.",
+      "reference": "1 John 2:2"
+    },
+    {
+      "id": 40,
+      "verse": "God demonstrated His own love for us in this: While we were still sinners, Christ died for us.",
+      "reference": "Romans 5:8"
+    },
+    {
+      "id": 41,
+      "verse": "The Lord appeared to us in the past, saying: 'I have loved you with an everlasting love; I have drawn you with unfailing kindness.'",
+      "reference": "Jeremiah 31:3"
+    },
+    {
+      "id": 42,
+      "verse": "The Lord is my shepherd, I lack nothing.",
+      "reference": "Psalm 23:1"
+    },
+    {
+      "id": 43,
+      "verse": "God is love. Whoever lives in love lives in God, and God in them.",
+      "reference": "1 John 4:16"
+    },
+    {
+      "id": 44,
+      "verse": "I have loved you with an everlasting love; therefore I have continued my faithfulness to you.",
+      "reference": "Jeremiah 31:3"
+    },
+    {
+      "id": 45,
+      "verse": "Do not fear, for I have redeemed you; I have summoned you by name; you are mine.",
+      "reference": "Isaiah 43:1"
+    },
+    {
+      "id": 46,
+      "verse": "Love the Lord your God with all your heart and with all your soul and with all your strength.",
+      "reference": "Deuteronomy 6:5"
+    },
+    {
+      "id": 47,
+      "verse": "The Lord is compassionate and gracious, slow to anger, abounding in love.",
+      "reference": "Psalm 103:8"
+    },
+    {
+      "id": 48,
+      "verse": "Let the morning bring me word of Your unfailing love, for I have put my trust in You.",
+      "reference": "Psalm 143:8"
+    },
+    {
+      "id": 49,
+      "verse": "Give thanks to the Lord, for He is good; His love endures forever.",
+      "reference": "Psalm 136:1"
+    },
+    {
+      "id": 50,
+      "verse": "The Lord is near to all who call on Him, to all who call on Him in truth.",
+      "reference": "Psalm 145:18"
+    },
+    {
+      "id": 51,
+      "verse": "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope.",
+      "reference": "Jeremiah 29:11"
+    },
+    {
+      "id": 52,
+      "verse": "As a father shows compassion to his children, so the Lord shows compassion to those who fear Him.",
+      "reference": "Psalm 103:13"
+    },
+    {
+      "id": 53,
+      "verse": "The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you; in His love He will no longer rebuke you, but will rejoice over you with singing.",
+      "reference": "Zephaniah 3:17"
+    },
+    {
+      "id": 54,
+      "verse": "For God is not a God of disorder but of peace, as in all the congregations of the Lord’s people.",
+      "reference": "1 Corinthians 14:33"
+    },
+    {
+      "id": 55,
+      "verse": "Whoever does not love does not know God, because God is love.",
+      "reference": "1 John 4:8"
+    },
+    {
+      "id": 56,
+      "verse": "But the Lord takes pleasure in those who fear Him, in those who hope in His steadfast love.",
+      "reference": "Psalm 147:11"
+    },
+    {
+      "id": 57,
+      "verse": "I will never leave you nor forsake you.",
+      "reference": "Hebrews 13:5"
+    },
+    {
+      "id": 58,
+      "verse": "For the mountains may depart and the hills be removed, but my steadfast love shall not depart from you, and my covenant of peace shall not be removed,” says the Lord, who has compassion on you.",
+      "reference": "Isaiah 54:10"
+    },
+    {
+      "id": 59,
+      "verse": "The Lord is my light and my salvation—whom shall I fear? The Lord is the stronghold of my life—of whom shall I be afraid?",
+      "reference": "Psalm 27:1"
+    },
+    {
+      "id": 60,
+      "verse": "The Lord will fight for you; you need only to be still.",
+      "reference": "Exodus 14:14"
+    },
+    {
+      "id": 61,
+      "verse": "Though my father and mother forsake me, the Lord will receive me.",
+      "reference": "Psalm 27:10"
+    },
+    {
+      "id": 62,
+      "verse": "God is our refuge and strength, an ever-present help in trouble.",
+      "reference": "Psalm 46:1"
+    },
+    {
+      "id": 63,
+      "verse": "The Lord is good to all, and His mercy is over all that He has made.",
+      "reference": "Psalm 145:9"
+    },
+    {
+      "id": 64,
+      "verse": "The steadfast love of the Lord never ceases; His mercies never come to an end.",
+      "reference": "Lamentations 3:22"
+    },
+    {
+      "id": 65,
+      "verse": "For the Lord loves the just and will not forsake His faithful ones.",
+      "reference": "Psalm 37:28"
+    },
+    {
+      "id": 66,
+      "verse": "As far as the east is from the west, so far has He removed our transgressions from us.",
+      "reference": "Psalm 103:12"
+    },
+    {
+      "id": 67,
+      "verse": "I have loved you with an everlasting love; I have drawn you with loving-kindness.",
+      "reference": "Jeremiah 31:3"
+    },
+    {
+      "id": 68,
+      "verse": "This is how we know what love is: Jesus Christ laid down His life for us.",
+      "reference": "1 John 3:16"
+    },
+    {
+      "id": 69,
+      "verse": "For nothing will be impossible with God.",
+      "reference": "Luke 1:37"
+    },
+    {
+      "id": 70,
+      "verse": "And the God of all grace, who called you to His eternal glory in Christ, after you have suffered a little while, will Himself restore you and make you strong, firm and steadfast.",
+      "reference": "1 Peter 5:10"
+    },
+    {
+      "id": 71,
+      "verse": "But God, being rich in mercy, because of the great love with which He loved us, even when we were dead in our trespasses, made us alive together with Christ—by grace you have been saved.",
+      "reference": "Ephesians 2:4-5"
+    },
+    {
+      "id": 72,
+      "verse": "In this is love, not that we have loved God but that He loved us and sent His Son to be the propitiation for our sins.",
+      "reference": "1 John 4:10"
+    },
+    {
+      "id": 73,
+      "verse": "Therefore, there is now no condemnation for those who are in Christ Jesus.",
+      "reference": "Romans 8:1"
+    },
+    {
+      "id": 74,
+      "verse": "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness.",
+      "reference": "Galatians 5:22"
+    },
+    {
+      "id": 75,
+      "verse": "Now the Lord is the Spirit, and where the Spirit of the Lord is, there is freedom.",
+      "reference": "2 Corinthians 3:17"
+    },
+    {
+      "id": 76,
+      "verse": "I will sing of the Lord’s great love forever; with my mouth I will make Your faithfulness known through all generations.",
+      "reference": "Psalm 89:1"
+    },
+    {
+      "id": 77,
+      "verse": "Jesus replied: 'Love the Lord your God with all your heart and with all your soul and with all your mind.'",
+      "reference": "Matthew 22:37"
+    },
+    {
+      "id": 78,
+      "verse": "And I am sure that He who began a good work in you will bring it to completion at the day of Jesus Christ.",
+      "reference": "Philippians 1:6"
+    },
+    {
+      "id": 79,
+      "verse": "For God did not send His Son into the world to condemn the world, but to save the world through Him.",
+      "reference": "John 3:17"
+    },
+    {
+      "id": 80,
+      "verse": "But God shows His love for us in that while we were still sinners, Christ died for us.",
+      "reference": "Romans 5:8"
+    },
+    {
+      "id": 81,
+      "verse": "You are precious in my sight, and honored, and I love you.",
+      "reference": "Isaiah 43:4"
+    },
+    {
+      "id": 82,
+      "verse": "For God is not unjust to forget your work and labor of love which you have shown toward His name.",
+      "reference": "Hebrews 6:10"
+    },
+    {
+      "id": 83,
+      "verse": "As the Father has loved me, so have I loved you. Abide in my love.",
+      "reference": "John 15:9"
+    },
+    {
+      "id": 84,
+      "verse": "The Lord is near to all who call on Him, to all who call on Him in truth.",
+      "reference": "Psalm 145:18"
+    },
+    {
+      "id": 85,
+      "verse": "The Lord is good to all; He has compassion on all He has made.",
+      "reference": "Psalm 145:9"
+    },
+    {
+      "id": 86,
+      "verse": "My grace is sufficient for you, for my power is made perfect in weakness.",
+      "reference": "2 Corinthians 12:9"
+    },
+    {
+      "id": 87,
+      "verse": "No eye has seen, no ear has heard, and no mind has imagined what God has prepared for those who love Him.",
+      "reference": "1 Corinthians 2:9"
+    },
+    {
+      "id": 88,
+      "verse": "You are my friends if you do what I command you.",
+      "reference": "John 15:14"
+    },
+    {
+      "id": 89,
+      "verse": "I will never leave you nor forsake you.",
+      "reference": "Hebrews 13:5"
+    },
+    {
+      "id": 90,
+      "verse": "God is our refuge and strength, an ever-present help in trouble.",
+      "reference": "Psalm 46:1"
+    },
+    {
+      "id": 91,
+      "verse": "For God so loved the world that He gave His one and only Son, that whoever believes in Him shall not perish but have eternal life.",
+      "reference": "John 3:16"
+    },
+    {
+      "id": 92,
+      "verse": "Let all that you do be done in love.",
+      "reference": "1 Corinthians 16:14"
+    },
+    {
+      "id": 93,
+      "verse": "Love the Lord your God with all your heart, with all your soul, and with all your mind.",
+      "reference": "Matthew 22:37"
+    },
+    {
+      "id": 94,
+      "verse": "The Lord is good to those who wait for Him, to the soul who seeks Him.",
+      "reference": "Lamentations 3:25"
+    },
+    {
+      "id": 95,
+      "verse": "For I am sure that neither death nor life, nor angels nor rulers, nor things present nor things to come, nor powers, nor height nor depth, nor anything else in all creation, will be able to separate us from the love of God in Christ Jesus our Lord.",
+      "reference": "Romans 8:38-39"
+    },
+    {
+      "id": 96,
+      "verse": "But the one who endures to the end will be saved.",
+      "reference": "Matthew 24:13"
+    },
+    {
+      "id": 97,
+      "verse": "We love because He first loved us.",
+      "reference": "1 John 4:19"
+    },
+    {
+      "id": 98,
+      "verse": "For the mountains may depart and the hills be removed, but my steadfast love shall not depart from you, and my covenant of peace shall not be removed,” says the Lord, who has compassion on you.",
+      "reference": "Isaiah 54:10"
+    },
+    {
+      "id": 99,
+      "verse": "The Lord appeared to us in the past, saying: 'I have loved you with an everlasting love; I have drawn you with unfailing kindness.'",
+      "reference": "Jeremiah 31:3"
+    },
+    {
+      "id": 100,
+      "verse": "For God, who said, 'Let light shine out of darkness,' made His light shine in our hearts to give us the light of the knowledge of God’s glory displayed in the face of Christ.",
+      "reference": "2 Corinthians 4:6"
+    }
+  ],
+  "bibleVersesGratitude": [
+    {
+      "id": 1,
+      "verse": "Give thanks to the Lord, for he is good; his love endures forever.",
+      "reference": "1 Chronicles 16:34"
+    },
+    {
+      "id": 2,
+      "verse": "Rejoice always, pray continually, give thanks in all circumstances; for this is God’s will for you in Christ Jesus.",
+      "reference": "1 Thessalonians 5:16-18"
+    },
+    {
+      "id": 3,
+      "verse": "Let us come before him with thanksgiving and extol him with music and song.",
+      "reference": "Psalm 95:2"
+    },
+    {
+      "id": 4,
+      "verse": "Enter his gates with thanksgiving and his courts with praise; give thanks to him and praise his name.",
+      "reference": "Psalm 100:4"
+    },
+    {
+      "id": 5,
+      "verse": "I will give thanks to the Lord because of his righteousness; I will sing the praises of the name of the Lord Most High.",
+      "reference": "Psalm 7:17"
+    },
+    {
+      "id": 6,
+      "verse": "Give thanks to the Lord, for he is good; his love endures forever.",
+      "reference": "Psalm 136:1"
+    },
+    {
+      "id": 7,
+      "verse": "I will bless the Lord at all times; his praise shall continually be in my mouth.",
+      "reference": "Psalm 34:1"
+    },
+    {
+      "id": 8,
+      "verse": "Thanks be to God for his indescribable gift!",
+      "reference": "2 Corinthians 9:15"
+    },
+    {
+      "id": 9,
+      "verse": "Do everything without grumbling or arguing, so that you may become blameless and pure, children of God without fault in a warped and crooked generation. Then you will shine among them like stars in the sky.",
+      "reference": "Philippians 2:14-15"
+    },
+    {
+      "id": 10,
+      "verse": "And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him.",
+      "reference": "Colossians 3:17"
+    },
+    {
+      "id": 11,
+      "verse": "Let the peace of Christ rule in your hearts, since as members of one body you were called to peace. And be thankful.",
+      "reference": "Colossians 3:15"
+    },
+    {
+      "id": 12,
+      "verse": "Be thankful in all circumstances, for this is God’s will for you who belong to Christ Jesus.",
+      "reference": "1 Thessalonians 5:18"
+    },
+    {
+      "id": 13,
+      "verse": "Sing to the Lord with grateful praise; make music to our God on the harp.",
+      "reference": "Psalm 147:7"
+    },
+    {
+      "id": 14,
+      "verse": "Give thanks to the Lord, for he is good. His love endures forever.",
+      "reference": "Psalm 106:1"
+    },
+    {
+      "id": 15,
+      "verse": "Praise the Lord. Give thanks to the Lord, for he is good; his love endures forever.",
+      "reference": "Psalm 106:1"
+    },
+    {
+      "id": 16,
+      "verse": "Oh give thanks to the Lord; call upon his name; make known his deeds among the peoples!",
+      "reference": "1 Chronicles 16:8"
+    },
+    {
+      "id": 17,
+      "verse": "I will give thanks to the Lord with my whole heart; I will recount all of your wonderful deeds.",
+      "reference": "Psalm 9:1"
+    },
+    {
+      "id": 18,
+      "verse": "Sing to the Lord a new song, for he has done marvelous things; his right hand and his holy arm have worked salvation for him.",
+      "reference": "Psalm 98:1"
+    },
+    {
+      "id": 19,
+      "verse": "Let everything that has breath praise the Lord. Praise the Lord.",
+      "reference": "Psalm 150:6"
+    },
+    {
+      "id": 20,
+      "verse": "Give thanks to the Lord for his unfailing love and his wonderful deeds for mankind.",
+      "reference": "Psalm 107:8"
+    },
+    {
+      "id": 21,
+      "verse": "Thanks be to God, who gives us the victory through our Lord Jesus Christ.",
+      "reference": "1 Corinthians 15:57"
+    },
+    {
+      "id": 22,
+      "verse": "Give thanks to the Lord, the God of gods. His love endures forever.",
+      "reference": "Psalm 136:2"
+    },
+    {
+      "id": 23,
+      "verse": "Give thanks to the Lord of lords: his love endures forever.",
+      "reference": "Psalm 136:3"
+    },
+    {
+      "id": 24,
+      "verse": "For the Lord is good and his love endures forever; his faithfulness continues through all generations.",
+      "reference": "Psalm 100:5"
+    },
+    {
+      "id": 25,
+      "verse": "I will give thanks to the Lord because of his righteousness; I will sing the praises of the name of the Lord Most High.",
+      "reference": "Psalm 7:17"
+    },
+    {
+      "id": 26,
+      "verse": "Give thanks to the Lord for his goodness, and for his wonderful works to the children of men!",
+      "reference": "Psalm 107:21"
+    },
+    {
+      "id": 27,
+      "verse": "I will thank the Lord with all my heart; I will tell of all your wonderful deeds.",
+      "reference": "Psalm 9:1"
+    },
+    {
+      "id": 28,
+      "verse": "Shout for joy to the Lord, all the earth. Worship the Lord with gladness; come before him with joyful songs.",
+      "reference": "Psalm 100:1-2"
+    },
+    {
+      "id": 29,
+      "verse": "Let your roots grow down into him, and let your lives be built on him. Then your faith will grow strong in the truth you were taught, and you will overflow with thankfulness.",
+      "reference": "Colossians 2:7"
+    },
+    {
+      "id": 30,
+      "verse": "Give thanks to the Lord, for he is good; his love endures forever.",
+      "reference": "1 Chronicles 16:34"
+    },
+    {
+      "id": 31,
+      "verse": "Praise be to the Lord, to God our Savior, who daily bears our burdens.",
+      "reference": "Psalm 68:19"
+    },
+    {
+      "id": 32,
+      "verse": "I will give thanks to the Lord for his righteousness; I will sing praises to the name of the Lord Most High.",
+      "reference": "Psalm 7:17"
+    },
+    {
+      "id": 33,
+      "verse": "Let everything that has breath praise the Lord. Praise the Lord.",
+      "reference": "Psalm 150:6"
+    },
+    {
+      "id": 34,
+      "verse": "You are my God, and I will give you thanks; you are my God, and I will exalt you.",
+      "reference": "Psalm 118:28"
+    },
+    {
+      "id": 35,
+      "verse": "Thanks be to God for his indescribable gift!",
+      "reference": "2 Corinthians 9:15"
+    },
+    {
+      "id": 36,
+      "verse": "Let us come before him with thanksgiving and extol him with music and song.",
+      "reference": "Psalm 95:2"
+    },
+    {
+      "id": 37,
+      "verse": "Sing to the Lord with grateful praise; make music to our God on the harp.",
+      "reference": "Psalm 147:7"
+    },
+    {
+      "id": 38,
+      "verse": "Give thanks to the Lord for his unfailing love and his wonderful deeds for mankind.",
+      "reference": "Psalm 107:8"
+    },
+    {
+      "id": 39,
+      "verse": "For the Lord is good and his love endures forever; his faithfulness continues through all generations.",
+      "reference": "Psalm 100:5"
+    },
+    {
+      "id": 40,
+      "verse": "Oh give thanks to the Lord; call upon his name; make known his deeds among the peoples!",
+      "reference": "1 Chronicles 16:8"
+    },
+    {
+      "id": 41,
+      "verse": "I will give thanks to the Lord with my whole heart; I will recount all of your wonderful deeds.",
+      "reference": "Psalm 9:1"
+    },
+    {
+      "id": 42,
+      "verse": "Sing to the Lord a new song, for he has done marvelous things; his right hand and his holy arm have worked salvation for him.",
+      "reference": "Psalm 98:1"
+    },
+    {
+      "id": 43,
+      "verse": "Give thanks to the Lord, for he is good; his love endures forever.",
+      "reference": "Psalm 136:1"
+    },
+    {
+      "id": 44,
+      "verse": "Let the peace of Christ rule in your hearts, since as members of one body you were called to peace. And be thankful.",
+      "reference": "Colossians 3:15"
+    },
+    {
+      "id": 45,
+      "verse": "And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him.",
+      "reference": "Colossians 3:17"
+    },
+    {
+      "id": 46,
+      "verse": "For everything comes from him and exists by his power and is intended for his glory. All glory to him forever! Amen.",
+      "reference": "Romans 11:36"
+    },
+    {
+      "id": 47,
+      "verse": "Give thanks in all circumstances, for this is God’s will for you in Christ Jesus.",
+      "reference": "1 Thessalonians 5:18"
+    },
+    {
+      "id": 48,
+      "verse": "Thanks be to God for his indescribable gift!",
+      "reference": "2 Corinthians 9:15"
+    },
+    {
+      "id": 49,
+      "verse": "But the one who endures to the end will be saved.",
+      "reference": "Matthew 24:13"
+    },
+    {
+      "id": 50,
+      "verse": "For I am sure that neither death nor life, nor angels nor rulers, nor things present nor things to come, nor powers, nor height nor depth, nor anything else in all creation, will be able to separate us from the love of God in Christ Jesus our Lord.",
+      "reference": "Romans 8:38-39"
+    }
+  ],
+  "bibleVersesPrayers": [
+    {
+      "verse": "And this is the confidence that we have toward him, that if we ask anything according to his will, he hears us.",
+      "reference": "1 John 5:14"
+    },
+    {
+      "verse": "Do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God.",
+      "reference": "Philippians 4:6"
+    },
+    {
+      "verse": "Ask, and it will be given to you; seek, and you will find; knock, and it will be opened to you.",
+      "reference": "Matthew 7:7"
+    },
+    {
+      "verse": "Call to me and I will answer you, and will tell you great and hidden things that you have not known.",
+      "reference": "Jeremiah 33:3"
+    },
+    {
+      "verse": "The Lord is near to all who call on him, to all who call on him in truth.",
+      "reference": "Psalm 145:18"
+    },
+    {
+      "verse": "Therefore I tell you, whatever you ask in prayer, believe that you have received it, and it will be yours.",
+      "reference": "Mark 11:24"
+    },
+    {
+      "verse": "But the Lord is faithful. He will establish you and guard you against the evil one.",
+      "reference": "2 Thessalonians 3:3"
+    },
+    {
+      "verse": "And whatever you ask in prayer, you will receive, if you have faith.",
+      "reference": "Matthew 21:22"
+    },
+    {
+      "verse": "For the eyes of the Lord are on the righteous and his ears are attentive to their prayer.",
+      "reference": "1 Peter 3:12"
+    },
+    {
+      "verse": "The prayer of a righteous person has great power as it is working.",
+      "reference": "James 5:16"
+    },
+    {
+      "verse": "Ask and you will receive, so that your joy may be complete.",
+      "reference": "John 16:24"
+    },
+    {
+      "verse": "If any of you lacks wisdom, let him ask of God, who gives to all liberally and without reproach, and it will be given to him.",
+      "reference": "James 1:5"
+    },
+    {
+      "verse": "But I say to you, Love your enemies and pray for those who persecute you.",
+      "reference": "Matthew 5:44"
+    },
+    {
+      "verse": "Pray without ceasing.",
+      "reference": "1 Thessalonians 5:17"
+    },
+    {
+      "verse": "The Lord is my shepherd; I shall not want.",
+      "reference": "Psalm 23:1"
+    },
+    {
+      "verse": "Jesus said to him, ‘If you can? All things are possible for one who believes.’",
+      "reference": "Mark 9:23"
+    },
+    {
+      "verse": "For where two or three are gathered in my name, there am I among them.",
+      "reference": "Matthew 18:20"
+    },
+    {
+      "verse": "When you pray, go into your room and shut the door and pray to your Father who is in secret, and your Father who sees in secret will reward you.",
+      "reference": "Matthew 6:6"
+    },
+    {
+      "verse": "Pray in the Spirit at all times with all kinds of prayers and requests.",
+      "reference": "Ephesians 6:18"
+    },
+    {
+      "verse": "But he said to me, ‘My grace is sufficient for you, for my power is made perfect in weakness.’",
+      "reference": "2 Corinthians 12:9"
+    },
+    {
+      "verse": "Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need.",
+      "reference": "Hebrews 4:16"
+    },
+    {
+      "verse": "Call to me and I will answer you and tell you great and unsearchable things you do not know.",
+      "reference": "Jeremiah 33:3"
+    },
+    {
+      "verse": "This is the confidence we have in approaching God: that if we ask anything according to His will, He hears us. And if we know that He hears us—whatever we ask—we know that we have what we asked of Him.",
+      "reference": "1 John 5:14-15"
+    },
+    {
+      "verse": "Ask and it will be given to you; seek and you will find; knock and the door will be opened to you. For everyone who asks receives; the one who seeks finds; and to the one who knocks, the door will be opened.",
+      "reference": "Matthew 7:7-8"
+    },
+    {
+      "verse": "Therefore I tell you, whatever you ask for in prayer, believe that you have received it, and it will be yours.",
+      "reference": "Mark 11:24"
+    },
+    {
+      "verse": "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.",
+      "reference": "Philippians 4:6-7"
+    },
+    {
+      "verse": "So I say to you: Ask and it will be given to you; seek and you will find; knock and the door will be opened to you. For everyone who asks receives; the one who seeks finds; and to the one who knocks, the door will be opened.",
+      "reference": "Luke 11:9-10"
+    },
+    {
+      "verse": "In the same way, the Spirit helps us in our weakness. We do not know what we ought to pray for, but the Spirit himself intercedes for us through wordless groans. And He who searches our hearts knows the mind of the Spirit, because the Spirit intercedes for God’s people in accordance with the will of God.",
+      "reference": "Romans 8:26-27"
+    },
+    {
+      "verse": "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective.",
+      "reference": "James 5:16"
+    },
+    {
+      "verse": "Until now you have not asked for anything in my name. Ask and you will receive, and your joy will be complete.",
+      "reference": "John 16:24"
+    },
+    {
+      "verse": "The righteous cry out, and the Lord hears them; He delivers them from all their troubles.",
+      "reference": "Psalm 34:17"
+    },
+    {
+      "verse": "Before they call I will answer; while they are still speaking I will hear.",
+      "reference": "Isaiah 65:24"
+    },
+    {
+      "verse": "If you believe, you will receive whatever you ask for in prayer.",
+      "reference": "Matthew 21:22"
+    },
+    {
+      "verse": "The Lord is near to all who call on him, to all who call on him in truth.",
+      "reference": "Psalm 145:18"
+    },
+    {
+      "verse": "If my people, who are called by my name, will humble themselves and pray and seek my face and turn from their wicked ways, then I will hear from heaven, and I will forgive their sin and will heal their land.",
+      "reference": "2 Chronicles 7:14"
+    },
+    {
+      "verse": "Pray continually.",
+      "reference": "1 Thessalonians 5:17"
+    },
+    {
+      "verse": "But when you pray, go into your room, close the door and pray to your Father, who is unseen; then your Father, who sees what is done in secret, will reward you.",
+      "reference": "Matthew 6:6"
+    },
+    {
+      "verse": "For the eyes of the Lord are on the righteous and His ears are attentive to their prayer, but the face of the Lord is against those who do evil.",
+      "reference": "1 Peter 3:12"
+    },
+    {
+      "verse": "As you help us by your prayers, then many will give thanks on our behalf for the gracious favor granted us in answer to the prayers of many.",
+      "reference": "2 Corinthians 1:11"
+    },
+    {
+      "verse": "Let us then approach God’s throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need.",
+      "reference": "Hebrews 4:16"
+    },
+    {
+      "verse": "Again, truly I tell you that if two of you on earth agree about anything they ask for, it will be done for them by my Father in heaven. For where two or three gather in my name, there am I with them.",
+      "reference": "Matthew 18:19-20"
+    },
+    {
+      "verse": "Ask and it will be given to you; seek and you will find; knock and the door will be opened to you.",
+      "reference": "Matthew 7:7"
+    },
+    {
+      "verse": "The prayer of a righteous person is powerful and effective.",
+      "reference": "James 5:16"
+    },
+    {
+      "verse": "For everyone who asks receives; the one who seeks finds; and to the one who knocks, the door will be opened.",
+      "reference": "Luke 11:10"
+    },
+    {
+      "verse": "If you remain in me and my words remain in you, ask whatever you wish, and it will be done for you.",
+      "reference": "John 15:7"
+    },
+    {
+      "verse": "And whatever you ask in prayer, you will receive, if you have faith.",
+      "reference": "Matthew 21:22"
+    },
+    {
+      "verse": "But if any of you lacks wisdom, let him ask of God, who gives to all liberally and without reproach, and it will be given to him.",
+      "reference": "James 1:5"
+    }
+  ]
+}
