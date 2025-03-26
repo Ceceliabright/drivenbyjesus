@@ -5,102 +5,183 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align content at the top to leave space for the navbar */
+  height: 100vh; /* Full height of the viewport */
+  flex-direction: column;
 }
 
-/* Welcome page container */
+/* Add some padding to the top to prevent content from being scrunched at the top */
 .welcome-container {
-  text-align: center;
-  padding: 20px;
-  max-width: 100%;
+  padding-top: 20px; /* Adds padding at the top for spacing */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center align the content */
 }
 
-.welcome-header {
-  font-size: 2.5rem;
-  color: #2A2A2A;
-  margin-bottom: 20px;
-  font-weight: bold;
+/* Ensure the navbar is fixed to the top */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent; /* If you want it transparent */
+  z-index: 1000; /* Ensure it's above other content */
+  padding: 10px;
+  /* Add any other styles for navbar like height, etc. */
 }
 
-.welcome-subheader {
-  font-size: 1.25rem;
-  color: #555555;
-  margin-bottom: 40px;
+/* Adjust the body or root container to give space for the navbar */
+body {
+  margin-top: 690px; /* Adjust this value based on your navbar height */
 }
 
-/* Button custom styles */
-.btn-primary {
-  background-color: #3b714e; /* Light Green */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+
+
+/* Navbar Styles */
+nav {
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Keeps the navbar on top */
+  backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background behind the navbar */
 }
 
-.btn-primary:hover {
-  background-color: #7FB98E; /* Darker Green */
-}
-
-.btn-secondary {
-  background-color: #A7C7E7; /* Soft Blue */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background-color: #7298A8; /* Darker Blue */
-}
-
-/* Card for added visual interest */
-.card {
-  background-color: #3d8a40; /* Light Lavender */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
-}
-
-.card-title {
-  font-size: 1.5rem;
-  color: #2A2A2A;
-}
-
-.card-body {
-  font-size: 1rem;
-  color: #555555;
-}
-
-.card-footer {
-  text-align: right;
-  font-size: 0.9rem;
-  color: #777777;
-}
-
-/* Navigation link styles */
-nav ul {
+.nav {
+  display: flex;
+  justify-content: center;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-nav li {
-  display: inline-block;
-  margin-right: 20px;
+.nav-item {
+  margin: 0 15px;
 }
 
 .nav-link {
+  color: white;
   text-decoration: none;
-  color: #2A2A2A;
-  font-size: 1.1rem;
+  font-size: 18px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Adds a slight shadow to the text for better readability */
 }
 
 .nav-link:hover {
-  color: #7FB98E; /* Light Green hover effect */
-  transition: color 0.3s ease;
+  color: #00bcd4; /* Light blue on hover for a calm feel */
+}
+
+/* Add some padding to the top to prevent content from being scrunched at the top */
+.welcome-container {
+  padding-top: 20px; /* Adds padding at the top for spacing */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center align the content */
 }
 
 
+
+
+/* Spinner Styles */
+.spinner-rainbow {
+  border: 8px solid #f3f3f3; /* Light gray background */
+  border-top: 8px solid #00bcd4; /* Comforting blue-green */
+  border-right: 8px solid #1e88e5; /* Blue shade */
+  border-bottom: 8px solid #4caf50; /* Greenish-blue shade */
+  border-left: 8px solid #009688; /* Deep teal color */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto; /* This ensures the spinner is centered horizontally */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    border-top-color: #00bcd4;
+    border-right-color: #1e88e5;
+    border-bottom-color: #4caf50;
+    border-left-color: #009688;
+  }
+  25% {
+    transform: rotate(90deg);
+    border-top-color: #1e88e5;
+    border-right-color: #4caf50;
+    border-bottom-color: #009688;
+    border-left-color: #00bcd4;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-top-color: #4caf50;
+    border-right-color: #009688;
+    border-bottom-color: #00bcd4;
+    border-left-color: #1e88e5;
+  }
+  75% {
+    transform: rotate(270deg);
+    border-top-color: #009688;
+    border-right-color: #00bcd4;
+    border-bottom-color: #1e88e5;
+    border-left-color: #4caf50;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top-color: #00bcd4;
+    border-right-color: #1e88e5;
+    border-bottom-color: #4caf50;
+    border-left-color: #009688;
+  }
+}
+
+/* Add more space between the navbar and content */
+.main-content {
+  margin-top: 80px; /* Increase this value to add more space for the navbar */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Button styles for the weather page */
+.btn-info {
+  width: 250px;
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 30px;
+  padding: 20px 0;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+/* Add some top padding to the content to prevent it from being hidden behind the navbar */
+.prayers-container {
+  padding-top: 70px; /* Adjust this value based on your navbar height */
+  max-width: 600px;
+  margin: auto;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4c9c4f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

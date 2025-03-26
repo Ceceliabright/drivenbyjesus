@@ -1,13 +1,127 @@
 {
-  "prayers": [],
-  "gratitudes": [],
+  "prayers": [
+    {
+      "prayer": "update empty prayer again",
+      "reason": "because I care",
+      "date": "3/26/2025, 1:21:44 PM",
+      "id": 1
+    },
+    {
+      "title": "Prayer 2",
+      "content": "309 update",
+      "date": "3/25/2025, 3:08:43 PM",
+      "id": 2
+    },
+    {
+      "title": "Prayer 3",
+      "content": "310 update\n",
+      "date": "3/25/2025, 3:08:56 PM",
+      "id": 3
+    },
+    {
+      "prayer": "314",
+      "reason": "314",
+      "date": "3/25/2025, 3:14:46 PM",
+      "id": 4
+    },
+    {
+      "prayer": "Updated God help me please",
+      "reason": "I don't know how to do this",
+      "date": "3/26/2025, 10:34:50 AM",
+      "id": 5
+    },
+    {
+      "prayer": "10:53 help me please",
+      "reason": "because you love me",
+      "date": "3/26/2025, 10:53:16 AM",
+      "id": 6
+    },
+    {
+      "prayer": "1253 updated",
+      "reason": "1253 update",
+      "date": "3/26/2025, 12:54:24 PM",
+      "id": 7
+    },
+    {
+      "prayer": "1254 update",
+      "reason": " update",
+      "date": "3/26/2025, 12:55:03 PM",
+      "id": 8
+    },
+    {
+      "email": "newuser@example.com",
+      "password": "securePassword",
+      "id": 9
+    },
+    {
+      "prayer": "0541 update",
+      "reason": "0541",
+      "date": "3/26/2025, 5:20:29 PM",
+      "id": 10
+    }
+  ],
+  "gratitudes": [
+    {
+      "item": "everything",
+      "reason": "he's great",
+      "date": "3/17/2025, 11:56:22 AM",
+      "id": 1
+    },
+    {
+      "item": "grateful for everything",
+      "reason": "Blessed so highly 1221",
+      "date": "3/25/2025, 12:21:39 PM",
+      "id": 2
+    }
+  ],
   "users": [
     {
       "id": 1,
-      "username": "jane_doe",
-      "password": "hashed_password456",
-      "email": "jane@example.com",
-      "profileImage": "Image.jpg"
+      "email": "user@examples.com",
+      "password": "password123",
+      "hashedPassword": "hashed-version-of-password",
+      "signupDate": "2025-03-26T14:00:00Z",
+      "authToken": "sample-jwt-token"
+    },
+    {
+      "email": "0605@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "email": "456@gmail.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "email": "608@gmail.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "email": "456@gmail.com",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "email": "0614@gmail.com",
+      "password": "1234",
+      "id": 6
+    },
+    {
+      "email": "0619@gmail.com",
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "email": "0633@gmail.com",
+      "password": "1234",
+      "id": 8
+    },
+    {
+      "email": "0636@gmail.com",
+      "password": "1234",
+      "id": 9
     }
   ],
   "bibleVersesLove": [

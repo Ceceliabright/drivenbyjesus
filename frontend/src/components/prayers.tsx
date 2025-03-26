@@ -1,322 +1,185 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
+import { fetchData, saveData, updateData, deleteData } from './CrudService';
+
+interface Prayer {
+  id: number;
+  prayer: string;
+  reason: string;
+  date: string;
+}
 
 const Prayers: React.FC = () => {
-  const [posts, setPosts] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [prayers, setPrayers] = useState<Prayer[]>([]);
+  const [newPrayer, setNewPrayer] = useState('');
+  const [newReason, setNewReason] = useState('');
+  const [editingPrayer, setEditingPrayer] = useState<number | null>(null);
+  const [editPrayerText, setEditPrayerText] = useState('');
+  const [editReason, setEditReason] = useState('');
+  const [error, setError] = useState('');
 
-  const [newPrayer, setNewPrayer] = useState<string>(''); // State for new prayer input
-  const [editingPrayer, setEditingPrayer] = useState<any | null>(null); // State for the prayer being edited
-  const [answers, setAnswers] = useState<{ [key: number]: string }>({}); // State to manage answers
-
-  // State for the random Bible verse about prayers
-  const [bibleVersesPrayers, setBibleVersesPrayers] = useState<any[]>([]);
-  const [currentVerse, setCurrentVerse] = useState<any>(null);
-
-  // Fetch prayers and Bible verses from the backend
   useEffect(() => {
-    fetch('http://localhost:5000/prayers')
-      .then((response) => response.json())
-      .then((data) => {
-        const sortedData = data.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
-        setPosts(sortedData);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError('Error fetching data');
-        setLoading(false);
-        console.error('Error fetching posts:', error);
-      });
-
-    fetch('http://localhost:5000/bibleVersesPrayers')
-      .then((response) => response.json())
-      .then((data) => {
-        setBibleVersesPrayers(data);
-      })
-      .catch((error) => {
-        console.error('Error fetching Bible verses:', error);
-      });
-  }, []);
-
-  // Stable function to get a random Bible verse
-  const getRandomVerse = useCallback(() => {
-    if (bibleVersesPrayers.length > 0) {
-      const randomIndex = Math.floor(Math.random() * bibleVersesPrayers.length);
-      return bibleVersesPrayers[randomIndex];
-    }
-    return null;
-  }, [bibleVersesPrayers]);
-
-  // Display a random Bible verse when the component is loaded
-  useEffect(() => {
-    if (bibleVersesPrayers.length > 0) {
-      setCurrentVerse(getRandomVerse());
-    }
-  }, [bibleVersesPrayers, getRandomVerse]);
-
-  // Function to reload a new verse
-  const reloadVerse = () => {
-    setCurrentVerse(getRandomVerse());
-  };
-
-  // Delete prayer function
-  const deletePrayer = async (id: number) => {
-    try {
-      const response = await fetch(`http://localhost:5000/prayers/${id}`, {
-        method: 'DELETE',
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to delete prayer');
+    const loadPrayers = async () => {
+      try {
+        const data = await fetchData('prayers');
+        setPrayers(data);
+      } catch (error) {
+        setError('Error fetching prayers');
       }
-
-      // Update state by filtering out the deleted prayer
-      setPosts((prevPosts) => prevPosts.filter((prayer) => prayer.id !== id));
-    } catch (error) {
-      setError('Error deleting prayer');
-      console.error('Error deleting prayer:', error);
-    }
-  };
-
-  // Function to handle saving or updating a prayer
-  const handleSavePrayer = () => {
-    if (!newPrayer.trim()) {
-      alert('Please enter a prayer before saving!');
-      return;
-    }
-
-    const prayerData = {
-      title: `Prayer ${posts.length + 1}`,
-      content: newPrayer,
-      date: new Date().toLocaleString(),
-      id: posts.length + 1,
     };
 
-    if (editingPrayer) {
-      const updatedPrayer = { ...editingPrayer, content: newPrayer };
+    loadPrayers();
+  }, []);
 
-      // Update the prayer on the backend
-      fetch(`http://localhost:5000/prayers/${editingPrayer.id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updatedPrayer),
-      })
-        .then((response) => response.json())
-        .then((updatedData) => {
-          setPosts((prevPosts) =>
-            prevPosts.map((prayer) =>
-              prayer.id === updatedData.id ? updatedData : prayer
-            )
-          );
-          setEditingPrayer(null); // Reset editing state
-          setNewPrayer(''); // Reset newPrayer field
-        })
-        .catch((error) => {
-          console.error('Error updating prayer:', error);
-          setError('Error updating prayer');
-        });
-    } else {
-      // Save a new prayer
-      fetch('http://localhost:5000/prayers', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(prayerData),
-      })
-        .then((response) => response.json())
-        .then((savedPrayer) => {
-          setPosts((prevPosts) => [savedPrayer, ...prevPosts]); // Add the new prayer to the top
-          setNewPrayer(''); // Clear input field
-        })
-        .catch((error) => {
-          console.error('Error saving prayer:', error);
-          setError('Error saving prayer');
-        });
-    }
-  };
-
-  // Function to handle submitting an answer to a prayer
-  const handleAnswerSubmit = (id: number) => {
-    const answer = answers[id]?.trim();
-    if (!answer) {
-      alert('Please enter an answer before submitting!');
+  const handleAddPrayer = async () => {
+    if (!newPrayer || !newReason) {
+      setError('Prayer and reason cannot be empty');
       return;
     }
 
-    const prayer = posts.find((prayer) => prayer.id === id);
-    if (prayer) {
-      const updatedPrayer = {
-        ...prayer,
-        answers: [...(prayer.answers || []), answer], // Add the new answer to the prayer
-      };
+    const newPrayerItem = {
+      prayer: newPrayer,
+      reason: newReason,
+      date: new Date().toLocaleString(),
+    };
 
-      fetch(`http://localhost:5000/prayers/${id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updatedPrayer),
-      })
-        .then((response) => response.json())
-        .then((updatedData) => {
-          setPosts((prevPosts) =>
-            prevPosts.map((prayer) =>
-              prayer.id === updatedData.id ? updatedData : prayer
-            )
-          );
-          setAnswers({ ...answers, [id]: '' }); // Clear the answer input field
-        })
-        .catch((error) => {
-          console.error('Error submitting answer:', error);
-          setError('Error submitting answer');
-        });
+    try {
+      const savedPrayer = await saveData('prayers', newPrayerItem);
+      setPrayers([...prayers, savedPrayer]);
+      setNewPrayer('');
+      setNewReason('');
+      setError('');
+    } catch (error) {
+      setError('Error saving prayer');
+    }
+  };
+
+  const handleUpdate = async (id: number) => {
+    if (!editPrayerText || !editReason) {
+      setError('Prayer and reason cannot be empty');
+      return;
+    }
+
+    const updatedPrayer = {
+      prayer: editPrayerText,
+      reason: editReason,
+      date: new Date().toLocaleString(),
+    };
+
+    try {
+      const updated = await updateData('prayers', id, updatedPrayer);
+      setPrayers((prevPrayers) =>
+        prevPrayers.map((item) =>
+          item.id === id ? { ...item, ...updated } : item
+        )
+      );
+      setEditingPrayer(null);
+      setError('');
+    } catch (error) {
+      setError('Error updating prayer');
+    }
+  };
+
+  const handleDelete = async (id: number) => {
+    try {
+      await deleteData('prayers', id);
+      setPrayers(prayers.filter((item) => item.id !== id));
+    } catch (error) {
+      setError('Error deleting prayer');
     }
   };
 
   return (
     <div>
-      <h1>Prayer Tracker</h1>
+      <h1>Prayer List</h1>
 
-      {/* Display Random Bible Verse */}
-      {currentVerse && (
-        <div
-          style={{
-            marginBottom: '20px',
-            padding: '10px',
-            backgroundColor: 'lightgreen',
-            borderRadius: '5px',
-          }}
-        >
-          <h2>Prayer Verse</h2>
-          <blockquote style={{ fontStyle: 'italic', fontSize: '18px' }}>
-            "{currentVerse.verse}"
-          </blockquote>
-          <p>
-            <strong>Reference:</strong> {currentVerse.reference}
-          </p>
-          <button
-            onClick={reloadVerse}
-            style={{
-              padding: '5px 10px',
-              cursor: 'pointer',
-              backgroundColor: '#4CAF90',
-              color: 'white',
-            }}
-          >
-            Reload Verse
-          </button>
-        </div>
-      )}
+      {error && <p style={{ color: 'red' }}>{error}</p>}
 
-      {/* Input field and Save/Update button */}
       <div>
         <input
           type="text"
+          placeholder="Enter prayer"
           value={newPrayer}
           onChange={(e) => setNewPrayer(e.target.value)}
-          placeholder="Enter your prayer"
-          style={{
-            padding: '10px',
-            width: '300px',
-            marginRight: '10px',
-            borderRadius: '5px',
-          }}
+          style={{ padding: '8px', marginRight: '5px', borderRadius: '5px', border: '1px solid #4CAF50' }}
+        />
+        <input
+          type="text"
+          placeholder="Enter reason"
+          value={newReason}
+          onChange={(e) => setNewReason(e.target.value)}
+          style={{ padding: '8px', marginRight: '5px', borderRadius: '5px', border: '1px solid #4CAF50' }}
         />
         <button
-          onClick={handleSavePrayer}
-          style={{
-            padding: '10px',
-            backgroundColor: editingPrayer ? '#FFA500' : '#4CAF50',
-            color: 'white',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-          }}
+          onClick={handleAddPrayer}
+          style={{ padding: '8px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px' }}
         >
-          {editingPrayer ? 'Update Prayer' : 'Save Prayer'}
+          Add Prayer
         </button>
       </div>
 
-      {/* Display prayers */}
-      {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
       <ul>
-        {posts.length > 0 ? (
-          posts.reverse().map((prayer) => (
-            <li key={prayer.id} style={{ margin: '10px 0' }}>
-              <h3>{prayer.title}</h3>
-              <p>
-                <strong>Content:</strong> {prayer.content}
-              </p>
-              <p>
-                <strong>Date:</strong> {prayer.date}
-              </p>
-
-              {/* Delete Button */}
-              <button
-                onClick={() => deletePrayer(prayer.id)}
-                style={{
-                  padding: '5px 10px',
-                  backgroundColor: 'green',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '5px',
-                  cursor: 'pointer',
-                }}
-              >
-                Delete
-              </button>
-
-              {/* Answer Input */}
+        {prayers.map((prayerItem) => (
+          <li
+            key={prayerItem.id}
+            style={{ marginBottom: '10px', padding: '10px', backgroundColor: '#A5D6A7', borderRadius: '5px' }}
+          >
+            {editingPrayer === prayerItem.id ? (
               <div>
                 <input
                   type="text"
-                  value={answers[prayer.id] || ''}
-                  onChange={(e) =>
-                    setAnswers({ ...answers, [prayer.id]: e.target.value })
-                  }
-                  placeholder="Enter how & when prayer was answered"
-                  style={{
-                    padding: '5px',
-                    width: '250px',
-                    marginRight: '10px',
-                    borderRadius: '5px',
-                  }}
+                  value={editPrayerText}
+                  onChange={(e) => setEditPrayerText(e.target.value)}
+                  style={{ padding: '8px', marginRight: '5px', borderRadius: '5px', border: '1px solid #4CAF50' }}
+                />
+                <input
+                  type="text"
+                  value={editReason}
+                  onChange={(e) => setEditReason(e.target.value)}
+                  style={{ padding: '8px', marginRight: '5px', borderRadius: '5px', border: '1px solid #4CAF50' }}
                 />
                 <button
-                  onClick={() => handleAnswerSubmit(prayer.id)}
-                  style={{
-                    padding: '5px 10px',
-                    backgroundColor: '#4CAF50',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '5px',
-                    cursor: 'pointer',
-                  }}
+                  onClick={() => handleUpdate(prayerItem.id)}
+                  style={{ padding: '8px', backgroundColor: '#66BB6A', color: 'white', border: 'none', borderRadius: '5px', marginRight: '5px' }}
                 >
-                  Submit Answer
+                  Save
+                </button>
+                <button
+                  onClick={() => setEditingPrayer(null)}
+                  style={{ padding: '8px', backgroundColor: '#388E3C', color: 'white', border: 'none', borderRadius: '5px' }}
+                >
+                  Cancel
                 </button>
               </div>
-
-              {/* Display Answers */}
-              {prayer.answers && prayer.answers.length > 0 && (
-                <div>
-                  <strong>Answers:</strong>
-                  <ul>
-                    {prayer.answers.map((answer: string, index: number) => (
-                      <li key={index}>{answer}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </li>
-          ))
-        ) : (
-          <p>No prayers available</p>
-        )}
+            ) : (
+              <>
+                <p><strong>Prayer:</strong> {prayerItem.prayer}</p>
+                <p><strong>Reason:</strong> {prayerItem.reason}</p>
+                <p><strong>Date:</strong> {prayerItem.date}</p>
+                <button
+                  onClick={() => {
+                    setEditingPrayer(prayerItem.id);
+                    setEditPrayerText(prayerItem.prayer);
+                    setEditReason(prayerItem.reason);
+                  }}
+                  style={{ padding: '8px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px', marginRight: '5px' }}
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => handleDelete(prayerItem.id)}
+                  style={{ padding: '8px', backgroundColor: '#388E3C', color: 'white', border: 'none', borderRadius: '5px' }}
+                >
+                  Delete
+                </button>
+              </>
+            )}
+          </li>
+        ))}
       </ul>
     </div>
   );
 };
 
 export default Prayers;
+
 
