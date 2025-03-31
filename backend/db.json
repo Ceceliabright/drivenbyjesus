@@ -1,63 +1,40 @@
 {
   "prayers": [
     {
-      "prayer": "update empty prayer again",
-      "reason": "because I care",
-      "date": "3/26/2025, 1:21:44 PM",
+      "prayer": "200 edited",
+      "reason": "200",
+      "date": "3/27/2025, 2:00:30 PM",
       "id": 1
     },
     {
-      "title": "Prayer 2",
-      "content": "309 update",
-      "date": "3/25/2025, 3:08:43 PM",
+      "prayer": "212update",
+      "reason": "212",
+      "date": "3/27/2025, 7:55:55 PM",
       "id": 2
     },
     {
-      "title": "Prayer 3",
-      "content": "310 update\n",
-      "date": "3/25/2025, 3:08:56 PM",
+      "prayer": "755",
+      "reason": "755",
+      "date": "3/27/2025, 7:55:20 PM",
       "id": 3
     },
     {
-      "prayer": "314",
-      "reason": "314",
-      "date": "3/25/2025, 3:14:46 PM",
+      "prayer": "801",
+      "reason": "801",
+      "date": "3/27/2025, 8:01:07 PM",
       "id": 4
     },
     {
-      "prayer": "Updated God help me please",
-      "reason": "I don't know how to do this",
-      "date": "3/26/2025, 10:34:50 AM",
+      "prayer": "821",
+      "reason": "822",
+      "date": "3/28/2025, 8:22:22 AM",
       "id": 5
     },
     {
-      "prayer": "10:53 help me please",
-      "reason": "because you love me",
-      "date": "3/26/2025, 10:53:16 AM",
+      "prayer": "please help me",
+      "reason": "because i am nothing and no one without you",
+      "date": "3/31/2025, 12:58:37 PM",
       "id": 6
-    },
-    {
-      "prayer": "1253 updated",
-      "reason": "1253 update",
-      "date": "3/26/2025, 12:54:24 PM",
-      "id": 7
-    },
-    {
-      "prayer": "1254 update",
-      "reason": " update",
-      "date": "3/26/2025, 12:55:03 PM",
-      "id": 8
-    },
-    {
-      "email": "newuser@example.com",
-      "password": "securePassword",
-      "id": 9
-    },
-    {
-      "prayer": "0541 update",
-      "reason": "0541",
-      "date": "3/26/2025, 5:20:29 PM",
-      "id": 10
     }
   ],
   "gratitudes": [
@@ -72,56 +49,26 @@
       "reason": "Blessed so highly 1221",
       "date": "3/25/2025, 12:21:39 PM",
       "id": 2
+    },
+    {
+      "item": "802",
+      "reason": "802",
+      "date": "3/27/2025, 8:02:24 PM",
+      "id": 3
+    },
+    {
+      "item": "everything",
+      "reason": "he is good",
+      "date": "3/31/2025, 12:57:18 PM",
+      "id": 4
     }
   ],
   "users": [
     {
-      "id": 1,
-      "email": "user@examples.com",
-      "password": "password123",
-      "hashedPassword": "hashed-version-of-password",
-      "signupDate": "2025-03-26T14:00:00Z",
-      "authToken": "sample-jwt-token"
-    },
-    {
-      "email": "0605@gmail.com",
-      "password": "1234",
-      "id": 2
-    },
-    {
-      "email": "456@gmail.com",
-      "password": "1234",
-      "id": 3
-    },
-    {
-      "email": "608@gmail.com",
-      "password": "1234",
-      "id": 4
-    },
-    {
-      "email": "456@gmail.com",
-      "password": "1234",
-      "id": 5
-    },
-    {
-      "email": "0614@gmail.com",
-      "password": "1234",
-      "id": 6
-    },
-    {
-      "email": "0619@gmail.com",
-      "password": "1234",
-      "id": 7
-    },
-    {
-      "email": "0633@gmail.com",
-      "password": "1234",
-      "id": 8
-    },
-    {
-      "email": "0636@gmail.com",
-      "password": "1234",
-      "id": 9
+      "email": "1234@gmail.com",
+      "password": "$2a$10$vUF2yMAzbjzk60qn2sHkuuWYCfvKyosgRGWSeRLO0VGWOiabYMabO",
+      "dateJoined": "3/31/2025, 1:16:29 PM",
+      "id": 1
     }
   ],
   "bibleVersesLove": [

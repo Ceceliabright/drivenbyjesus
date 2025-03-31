@@ -113,7 +113,9 @@ const Gratitude: React.FC = () => {
   };
 
   return (
-    <div style={{ backgroundColor: '#E8F5E9', padding: '20px' }}>
+
+    <div style={{ backgroundColor: 'rgb(170, 208, 192)', padding: '20px', paddingTop: '200px' }}>
+     <p><br></br></p>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
 
@@ -121,13 +123,13 @@ const Gratitude: React.FC = () => {
         <div
           style={{
             marginBottom: '20px',
-            padding: '15px',
-            backgroundColor: '#A5D6A7', // Muted green background
+            padding: '20px',
+            backgroundColor: 'rgba(84, 225, 121, 0.3)', // Muted green background
             borderRadius: '10px',
-            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.9)',
           }}
         >
-          <h2 style={{ color: '#388E3C' }}>Gratitude Verse</h2>
+          <h2 style={{ color: '#388E3C' }}>What God says about gratitude</h2>
           <blockquote
             style={{
               fontStyle: 'italic',
@@ -151,7 +153,7 @@ const Gratitude: React.FC = () => {
               borderRadius: '5px',
             }}
           >
-            Reload Verse
+            What else God says about gratitude
           </button>
         </div>
       )}
@@ -159,7 +161,7 @@ const Gratitude: React.FC = () => {
       <h1 style={{ color: '#388E3C' }}>Gratitude List</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label style={{ color: '#388E3C' }}>Item:</label>
+          <label style={{ color: '#388E3C' }}>I am grateful to God for:</label>
           <input
             type="text"
             value={item}
@@ -167,7 +169,7 @@ const Gratitude: React.FC = () => {
             style={{
               padding: '8px',
               borderRadius: '5px',
-              border: '1px solid #4CAF50',
+              border: '4px solid #4CAF50',
               backgroundColor: '#F1F8E9',
             }}
           />
@@ -179,7 +181,7 @@ const Gratitude: React.FC = () => {
 
 
         <div>
-          <label style={{ color: '#388E3C' }}>Reason:</label>
+          <label style={{ color: '#388E3C' }}>I am grateful because:</label>
           <input
             type="text"
             value={reason}

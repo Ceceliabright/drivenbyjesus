@@ -1,10 +1,10 @@
 /* Set a calming background color for the whole page */
 body {
-  background-color: #7ba990; /* Soft Blue */
+  background-color: #51665f; /* Soft Blue */
   color: #2A2A2A; /* Dark Gray for contrast */
   font-family: 'Arial', sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Align content at the top to leave space for the navbar */
@@ -14,9 +14,10 @@ body {
 
 /* Add some padding to the top to prevent content from being scrunched at the top */
 .welcome-container {
-  padding-top: 20px; /* Adds padding at the top for spacing */
+  padding-top: 60px; /* Adds padding at the top for spacing */
   width: 100%;
-  max-width: 1200px;
+  columns: yellow;
+  /* max-width: 1200px; */
   margin: 0 auto; /* Center align the content */
 }
 
@@ -24,6 +25,7 @@ body {
 .navbar {
   position: fixed;
   top: 0;
+  padding-bottom: 10px; 
   left: 0;
   width: 100%;
   background-color: transparent; /* If you want it transparent */
@@ -34,15 +36,16 @@ body {
 
 /* Adjust the body or root container to give space for the navbar */
 body {
-  margin-top: 690px; /* Adjust this value based on your navbar height */
+  margin-top: 60px; /* Adjust this value based on your navbar height */
 }
 
 
 
 /* Navbar Styles */
 nav {
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
+  background-color: rgba(12, 13, 8, 0.9); /* Semi-transparent black background */
   width: 100%;
+  height: 60px;
   padding: 10px 0;
   position: fixed;
   top: 0;
@@ -55,8 +58,8 @@ nav {
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 20;
+  margin: 20;
 }
 
 .nav-item {
@@ -74,15 +77,13 @@ nav {
   color: #00bcd4; /* Light blue on hover for a calm feel */
 }
 
-/* Add some padding to the top to prevent content from being scrunched at the top */
+Add some padding to the top to prevent content from being scrunched at the top
 .welcome-container {
-  padding-top: 20px; /* Adds padding at the top for spacing */
+  padding-top: 0px; /* Adds padding at the top for spacing */
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto; /* Center align the content */
 }
-
-
 
 
 /* Spinner Styles */
@@ -138,12 +139,12 @@ nav {
 }
 
 /* Add more space between the navbar and content */
-.main-content {
-  margin-top: 80px; /* Increase this value to add more space for the navbar */
+ .main-content {
+  margin-top: 60px; /* Increase this value to add more space for the navbar */
   width: 100%;
-  padding: 20px;
+  padding-top: 120px;
   box-sizing: border-box;
-}
+} 
 
 /* Button styles for the weather page */
 .btn-info {
@@ -154,27 +155,28 @@ nav {
 footer {
   margin-top: 30px;
   padding: 20px 0;
-  background-color: #333;
+  background-color: #0d97a4;
   color: white;
   text-align: center;
   position: relative;
   bottom: 0;
   width: 100%;
 }
-/* Add some top padding to the content to prevent it from being hidden behind the navbar */
+
+/* Add some top padding to the content to prevent it from being hidden behind the navbar
 .prayers-container {
-  padding-top: 70px; /* Adjust this value based on your navbar height */
+  padding-top: 900px; /* Adjust this value based on your navbar height 
   max-width: 600px;
   margin: auto;
-}
+} */
 
-textarea {
+/* textarea {
   width: 100%;
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
-  border: 1px solid #ccc;
-}
+  border: 1px solid #ca3434;
+} */
 
 button {
   margin-top: 10px;
