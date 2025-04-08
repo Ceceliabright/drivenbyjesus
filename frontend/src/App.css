@@ -1,189 +1,202 @@
-/* Set a calming background color for the whole page */
-body {
-  background-color: #51665f; /* Soft Blue */
-  color: #2A2A2A; /* Dark Gray for contrast */
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Align content at the top to leave space for the navbar */
-  height: 100vh; /* Full height of the viewport */
-  flex-direction: column;
-}
 
-/* Add some padding to the top to prevent content from being scrunched at the top */
-.welcome-container {
-  padding-top: 60px; /* Adds padding at the top for spacing */
-  width: 100%;
-  columns: yellow;
-  /* max-width: 1200px; */
-  margin: 0 auto; /* Center align the content */
-}
-
-/* Ensure the navbar is fixed to the top */
-.navbar {
-  position: fixed;
-  top: 0;
-  padding-bottom: 10px; 
-  left: 0;
-  width: 100%;
-  background-color: transparent; /* If you want it transparent */
-  z-index: 1000; /* Ensure it's above other content */
-  padding: 10px;
-  /* Add any other styles for navbar like height, etc. */
-}
-
-/* Adjust the body or root container to give space for the navbar */
-body {
-  margin-top: 60px; /* Adjust this value based on your navbar height */
-}
-
-
-
-/* Navbar Styles */
-nav {
-  background-color: rgba(12, 13, 8, 0.9); /* Semi-transparent black background */
-  width: 100%;
-  height: 60px;
-  padding: 10px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10; /* Keeps the navbar on top */
-  backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background behind the navbar */
-}
-
-.nav {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 20;
-  margin: 20;
-}
-
-.nav-item {
-  margin: 0 15px;
-}
-
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Adds a slight shadow to the text for better readability */
-}
-
-.nav-link:hover {
-  color: #00bcd4; /* Light blue on hover for a calm feel */
-}
-
-Add some padding to the top to prevent content from being scrunched at the top
-.welcome-container {
-  padding-top: 0px; /* Adds padding at the top for spacing */
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto; /* Center align the content */
-}
-
-
-/* Spinner Styles */
-.spinner-rainbow {
-  border: 8px solid #f3f3f3; /* Light gray background */
-  border-top: 8px solid #00bcd4; /* Comforting blue-green */
-  border-right: 8px solid #1e88e5; /* Blue shade */
-  border-bottom: 8px solid #4caf50; /* Greenish-blue shade */
-  border-left: 8px solid #009688; /* Deep teal color */
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 2s linear infinite;
-  margin: 0 auto; /* This ensures the spinner is centered horizontally */
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-    border-top-color: #00bcd4;
-    border-right-color: #1e88e5;
-    border-bottom-color: #4caf50;
-    border-left-color: #009688;
+  /* Set a calming background color for the whole page */
+  body {
+    background-color: #51665f; /* Soft Blue */
+    color: #2A2A2A; /* Dark Gray for contrast */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content at the top to leave space for the navbar */
+    height: 100vh; /* Full height of the viewport */
+    flex-direction: column;
   }
-  25% {
-    transform: rotate(90deg);
-    border-top-color: #1e88e5;
-    border-right-color: #4caf50;
-    border-bottom-color: #009688;
-    border-left-color: #00bcd4;
+
+  /* Add some padding to the top to prevent content from being scrunched at the top */
+  .welcome-container {
+    padding-top: 160px; /* Adds padding at the top for spacing */
+    width: 100%;
+    margin: 0 auto; /* Center align the content */
   }
-  50% {
-    transform: rotate(180deg);
-    border-top-color: #4caf50;
-    border-right-color: #009688;
-    border-bottom-color: #00bcd4;
-    border-left-color: #1e88e5;
+
+  /* Ensure the navbar is fixed to the top */
+  .navbar {
+    position: fixed;
+    top: 0;
+    padding-bottom: 10px; 
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* If you want it transparent */
+    z-index: 1000; /* Ensure it's above other content */
+    padding: 10px;
   }
-  75% {
-    transform: rotate(270deg);
-    border-top-color: #009688;
-    border-right-color: #00bcd4;
-    border-bottom-color: #1e88e5;
-    border-left-color: #4caf50;
+
+  /* Navbar Styles */
+  nav {
+    background-color: rgba(12, 13, 8, 0.9); /* Semi-transparent black background */
+    width: 100%;
+    height: 60px;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Keeps the navbar on top */
+    backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background behind the navbar */
   }
-  100% {
-    transform: rotate(360deg);
-    border-top-color: #00bcd4;
-    border-right-color: #1e88e5;
-    border-bottom-color: #4caf50;
-    border-left-color: #009688;
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20;
+    margin: 20;
   }
+
+  .nav-item {
+    margin: 0 15px;
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Adds a slight shadow to the text for better readability */
+  }
+
+  .nav-link:hover {
+    color: #00bcd4; /* Light blue on hover for a calm feel */
+  }
+
+  /* Spinner Styles */
+  .spinner-rainbow {
+    border: 8px solid #f3f3f3; /* Light gray background */
+    border-top: 8px solid #00bcd4; /* Comforting blue-green */
+    border-right: 8px solid #1e88e5; /* Blue shade */
+    border-bottom: 8px solid #4caf50; /* Greenish-blue shade */
+    border-left: 8px solid #009688; /* Deep teal color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto; /* This ensures the spinner is centered horizontally */
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+      border-top-color: #00bcd4;
+      border-right-color: #1e88e5;
+      border-bottom-color: #4caf50;
+      border-left-color: #009688;
+    }
+    25% {
+      transform: rotate(90deg);
+      border-top-color: #1e88e5;
+      border-right-color: #4caf50;
+      border-bottom-color: #009688;
+      border-left-color: #00bcd4;
+    }
+    50% {
+      transform: rotate(180deg);
+      border-top-color: #4caf50;
+      border-right-color: #009688;
+      border-bottom-color: #00bcd4;
+      border-left-color: #1e88e5;
+    }
+    75% {
+      transform: rotate(270deg);
+      border-top-color: #009688;
+      border-right-color: #00bcd4;
+      border-bottom-color: #1e88e5;
+      border-left-color: #4caf50;
+    }
+    100% {
+      transform: rotate(360deg);
+      border-top-color: #00bcd4;
+      border-right-color: #1e88e5;
+      border-bottom-color: #4caf50;
+      border-left-color: #009688;
+    }
+  }
+
+  /* Add more space between the navbar and content */
+  .main-content {
+    margin-top: 60px; /* Increase this value to add more space for the navbar */
+    width: 100%;
+    padding-top: 120px;
+    box-sizing: border-box;
+  }
+
+  /* Button styles for the weather page */
+  .btn-info {
+    width: 250px;
+  }
+
+  /* Footer Styles */
+  footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    background-color: #30747c;
+    /* background-color: #0d97a4; */
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #b1c45b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+/* In your CSS file (e.g., App.css or a custom styles file) */
+.custom-link {
+  color: rgb(34, 53, 44); /* Set the text color you want */
+  text-decoration: none; /* Optional, in case you want to remove the underline */
 }
 
-/* Add more space between the navbar and content */
- .main-content {
-  margin-top: 60px; /* Increase this value to add more space for the navbar */
-  width: 100%;
-  padding-top: 120px;
-  box-sizing: border-box;
-} 
-
-/* Button styles for the weather page */
-.btn-info {
-  width: 250px;
-}
-
-/* Footer Styles */
-footer {
-  margin-top: 30px;
-  padding: 20px 0;
-  background-color: #0d97a4;
-  color: white;
+.outer-button {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2); /* Light, translucent background */
+  backdrop-filter: blur(12px); /* Stronger blur for frosted effect */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Light outline */
+  border-radius: 15px; /* Rounded rectangle shape */
+  padding: 2px 2px; /* Reduced padding for smaller height */
   text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  max-width: 200px; /* Width to fit the text */
+  margin: 8px auto; /* Slight vertical spacing */
 }
 
-/* Add some top padding to the content to prevent it from being hidden behind the navbar
-.prayers-container {
-  padding-top: 900px; /* Adjust this value based on your navbar height 
-  max-width: 600px;
-  margin: auto;
-} */
-
-/* textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ca3434;
-} */
-
-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #4c9c4f;
-  color: white;
-  border: none;
-  border-radius: 5px;
+.inner-button {
+  background: rgba(255, 255, 255, 0.15); /* Transparent button background */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light outline */
+  border-radius: 12px; /* Rounded edges */
+  color: rgba(255, 255, 255, 0.85); /* Soft white for lighter wording */
+  font-size: 12px; /* Slightly smaller text size */
+  padding: 1px, 2px; /* Compact button padding */
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  width: 100%; /* Fill the outer container */
+}
+
+.inner-button:hover {
+  background: rgba(255, 255, 255, 0.3); /* Slightly brighter on hover */
+  transform: scale(1.03); /* Slight zoom effect */
+  color: rgba(255, 255, 255, 1); /* Pure white on hover for emphasis */
+}
+
+
+
+.music-description {
+  font-size: 10px; /* Smaller description text */
+  color: #fbf6f6; /* Light gray text */
+  margin-top: 2px;
 }

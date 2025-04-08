@@ -6,9 +6,10 @@ import { AxiosError } from 'axios'; // Axios error handling
 
 // Define a functional component called SignUp
 const SignUp: React.FC = () => {
-  // State variables to store email, password, and error messages
+  // State variables to store email, password, username, and error messages
   const [email, setEmail] = useState(''); // Email input
   const [password, setPassword] = useState(''); // Password input
+  const [username, setUsername] = useState(''); // Username input
   const [error, setError] = useState(''); // Error messages
 
   // Hook to navigate to different pages after successful sign-up
@@ -18,22 +19,21 @@ const SignUp: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent the page from reloading when the form is submitted
 
-    // Check if both email and password are provided
-    if (!email || !password) {
-      setError('Email and password are required!'); // Show an error if one is missing
+    // Check if email, password, and username are provided
+    if (!email || !password || !username) {
+      setError('Email, username, and password are required!'); // Show an error if one is missing
       console.log(error); // Log the error for debugging
       return; // Stop here if inputs are missing
     }
 
     try {
-     // Create a user object with email and password
+      // Create a user object with email, username, and password
       const user = { 
         email, 
         password, 
+        username,
         dateJoined: new Date().toLocaleString() // Automatically set the current date and time
       };
-      
-      
       
       const response = await createUser(user); // Call the API to create the user
       alert('Account created successfully!'); // Show a success message
@@ -51,9 +51,6 @@ const SignUp: React.FC = () => {
   // Return the UI for the SignUp component
   return (
     <div>
-
-
-
       {/* Title of the page */}
       <h1>Sign Up</h1>
 
@@ -65,6 +62,14 @@ const SignUp: React.FC = () => {
           value={email} // Links the input value to the state
           onChange={(e) => setEmail(e.target.value)} // Updates state when input changes
           placeholder="Email" // Text shown inside the input when empty
+        />
+
+        {/* Username input field */}
+        <input
+          type="text" // Specifies the input is for username
+          value={username} // Links the input value to the state
+          onChange={(e) => setUsername(e.target.value)} // Updates state when input changes
+          placeholder="Username" // Text shown inside the input when empty
         />
 
         {/* Password input field */}
@@ -84,6 +89,97 @@ const SignUp: React.FC = () => {
 
 // Export the SignUp component so it can be used in other parts of the app
 export default SignUp;
+
+
+
+
+
+ // Import necessary libraries and tools
+// import React, { useState } from 'react'; // React and useState for managing form state
+// import { useNavigate } from 'react-router-dom'; // Navigation after sign-up
+// import { createUser } from '../api/users'; // Function to call API for creating users
+// import { AxiosError } from 'axios'; // Axios error handling
+
+// // Define a functional component called SignUp
+// const SignUp: React.FC = () => {
+//   // State variables to store email, password, and error messages
+//   const [email, setEmail] = useState(''); // Email input
+//   const [password, setPassword] = useState(''); // Password input
+//   const [error, setError] = useState(''); // Error messages
+
+//   // Hook to navigate to different pages after successful sign-up
+//   const navigate = useNavigate();
+
+//   // Function to handle the form submission
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault(); // Prevent the page from reloading when the form is submitted
+
+//     // Check if both email and password are provided
+//     if (!email || !password) {
+//       setError('Email and password are required!'); // Show an error if one is missing
+//       console.log(error); // Log the error for debugging
+//       return; // Stop here if inputs are missing
+//     }
+
+//     try {
+//      // Create a user object with email and password
+//       const user = { 
+//         email, 
+//         password, 
+//         dateJoined: new Date().toLocaleString() // Automatically set the current date and time
+//       };
+      
+      
+      
+//       const response = await createUser(user); // Call the API to create the user
+//       alert('Account created successfully!'); // Show a success message
+
+//       // Automatically log in the user after account creation
+//       localStorage.setItem('authToken', response.authToken); // Save the token provided by the server
+//       navigate('/home'); // Redirect the user to the home page
+//     } catch (error: unknown) {
+//       const axiosError = error as AxiosError; // Cast the error to an AxiosError for detailed info
+//       console.error('Error creating user:', axiosError.response || error); // Log the error details
+//       alert('Failed to create account. Please try again.'); // Show an error message to the user
+//     }
+//   };
+
+//   // Return the UI for the SignUp component
+//   return (
+//     <div>
+
+
+
+//       {/* Title of the page */}
+//       <h1>Sign Up</h1>
+
+//       {/* Form for user sign-up */}
+//       <form onSubmit={handleSubmit}>
+//         {/* Email input field */}
+//         <input
+//           type="email" // Specifies the input is for email
+//           value={email} // Links the input value to the state
+//           onChange={(e) => setEmail(e.target.value)} // Updates state when input changes
+//           placeholder="Email" // Text shown inside the input when empty
+//         />
+
+//         {/* Password input field */}
+//         <input
+//           type="password" // Specifies the input is for a password
+//           value={password} // Links the input value to the state
+//           onChange={(e) => setPassword(e.target.value)} // Updates state when input changes
+//           placeholder="Password" // Text shown inside the input when empty
+//         />
+
+//         {/* Submit button to create the account */}
+//         <button type="submit">Sign Up</button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// // Export the SignUp component so it can be used in other parts of the app
+// export default SignUp;
 
 
 

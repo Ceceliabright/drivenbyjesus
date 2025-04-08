@@ -1,15 +1,28 @@
+
+// Import necessary libraries and tools
 import React, { useEffect, useState } from 'react';
 import { getUsers, createUser, updateUser, deleteUser } from '../api/users';
 
+type User = {
+  id: string;
+  username?: string;
+  email: string;
+  password: string;
+  profileImage?: string;
+  dateJoined?: string;
+};
+
 const Users: React.FC = () => {
-  const [users, setUsers] = useState<any[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   // Form State
+  const [newUsername, setNewUsername] = useState('');
   const [newEmail, setNewEmail] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [editUserId, setEditUserId] = useState<string | null>(null);
+  const [editUsername, setEditUsername] = useState('');
   const [editEmail, setEditEmail] = useState('');
   const [editPassword, setEditPassword] = useState('');
 
@@ -33,7 +46,8 @@ const Users: React.FC = () => {
   const handleCreateUser = async () => {
     if (!newEmail || !newPassword) return;
     try {
-      await createUser({ email: newEmail, password: newPassword });
+      await createUser({ email: newEmail, password: newPassword, ...(newUsername && { username: newUsername }) });
+      setNewUsername('');
       setNewEmail('');
       setNewPassword('');
       fetchUsers(); // Refresh the list
@@ -43,8 +57,9 @@ const Users: React.FC = () => {
   };
 
   // Start Editing
-  const handleEditClick = (user: any) => {
+  const handleEditClick = (user: User) => {
     setEditUserId(user.id);
+    setEditUsername(user.username || '');
     setEditEmail(user.email);
     setEditPassword(user.password);
   };
@@ -53,7 +68,7 @@ const Users: React.FC = () => {
   const handleUpdateUser = async () => {
     if (!editUserId) return;
     try {
-      await updateUser(editUserId, { email: editEmail, password: editPassword });
+      await updateUser(editUserId, { email: editEmail, password: editPassword, ...(editUsername && { username: editUsername }) });
       setEditUserId(null);
       fetchUsers();
     } catch (err) {
@@ -81,18 +96,26 @@ const Users: React.FC = () => {
 
       {/* Create User Form */}
       <h2>Create User</h2>
+      <label>Username (Optional):</label>
+      <input type="text" placeholder="Username" value={newUsername} onChange={(e) => setNewUsername(e.target.value)} />
+      <label>Email:</label>
       <input type="email" placeholder="Email" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} />
+      <label>Password:</label>
       <input type="password" placeholder="Password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
       <button onClick={handleCreateUser}>Add User</button>
 
       {/* List Users */}
       <ul>
         {users.length > 0 ? (
-          users.slice().reverse().map((user) => (
+          users.map((user) => (
             <li key={user.id}>
               {editUserId === user.id ? (
                 <>
+                  <label>Username (Optional):</label>
+                  <input value={editUsername} onChange={(e) => setEditUsername(e.target.value)} />
+                  <label>Email:</label>
                   <input value={editEmail} onChange={(e) => setEditEmail(e.target.value)} />
+                  <label>Password:</label>
                   <input value={editPassword} onChange={(e) => setEditPassword(e.target.value)} />
                   <button onClick={handleUpdateUser}>Save</button>
                   <button onClick={() => setEditUserId(null)}>Cancel</button>
@@ -100,6 +123,7 @@ const Users: React.FC = () => {
               ) : (
                 <>
                   <p>ID: {user.id}</p>
+                  <p>Username: {user.username || 'N/A'}</p>
                   <p>Email: {user.email}</p>
                   <p>Hashed Password: {user.password}</p>
                   <p>Profile Image: {user.profileImage}</p>
@@ -119,6 +143,132 @@ const Users: React.FC = () => {
 };
 
 export default Users;
+
+
+
+
+// import React, { useEffect, useState } from 'react';
+// import { getUsers, createUser, updateUser, deleteUser } from '../api/users';
+
+// const Users: React.FC = () => {
+//   const [users, setUsers] = useState<any[]>([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState<string | null>(null);
+
+//   // Form State
+//   const [newEmail, setNewEmail] = useState('');
+//   const [newPassword, setNewPassword] = useState('');
+//   const [editUserId, setEditUserId] = useState<string | null>(null);
+//   const [editEmail, setEditEmail] = useState('');
+//   const [editPassword, setEditPassword] = useState('');
+
+//   // Fetch users when the component loads
+//   useEffect(() => {
+//     fetchUsers();
+//   }, []);
+
+//   const fetchUsers = async () => {
+//     setLoading(true);
+//     try {
+//       const data = await getUsers();
+//       setUsers(data.reverse());
+//     } catch (err) {
+//       setError('Error fetching data');
+//     }
+//     setLoading(false);
+//   };
+
+//   // Create User
+//   const handleCreateUser = async () => {
+//     if (!newEmail || !newPassword) return;
+//     try {
+//       await createUser({ email: newEmail, password: newPassword });
+//       setNewEmail('');
+//       setNewPassword('');
+//       fetchUsers(); // Refresh the list
+//     } catch (err) {
+//       setError('Error creating user');
+//     }
+//   };
+
+//   // Start Editing
+//   const handleEditClick = (user: any) => {
+//     setEditUserId(user.id);
+//     setEditEmail(user.email);
+//     setEditPassword(user.password);
+//   };
+
+//   // Update User
+//   const handleUpdateUser = async () => {
+//     if (!editUserId) return;
+//     try {
+//       await updateUser(editUserId, { email: editEmail, password: editPassword });
+//       setEditUserId(null);
+//       fetchUsers();
+//     } catch (err) {
+//       setError('Error updating user');
+//     }
+//   };
+
+//   // Delete User
+//   const handleDeleteUser = async (id: string) => {
+//     try {
+//       await deleteUser(id);
+//       fetchUsers();
+//     } catch (err) {
+//       setError('Error deleting user');
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <h1>User List (src/users.tsx)</h1>
+
+//       {/* Show loading or error message */}
+//       {loading && <p>Loading...</p>}
+//       {error && <p>{error}</p>}
+
+//       {/* Create User Form */}
+//       <h2>Create User</h2>
+//       <input type="email" placeholder="Email" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} />
+//       <input type="password" placeholder="Password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
+//       <button onClick={handleCreateUser}>Add User</button>
+
+//       {/* List Users */}
+//       <ul>
+//         {users.length > 0 ? (
+//           users.slice().reverse().map((user) => (
+//             <li key={user.id}>
+//               {editUserId === user.id ? (
+//                 <>
+//                   <input value={editEmail} onChange={(e) => setEditEmail(e.target.value)} />
+//                   <input value={editPassword} onChange={(e) => setEditPassword(e.target.value)} />
+//                   <button onClick={handleUpdateUser}>Save</button>
+//                   <button onClick={() => setEditUserId(null)}>Cancel</button>
+//                 </>
+//               ) : (
+//                 <>
+//                   <p>ID: {user.id}</p>
+//                   <p>Username: {user.username}</p>
+//                   <p>Email: {user.email}</p>
+//                   <p>Hashed Password: {user.password}</p>
+//                   <p>Profile Image: {user.profileImage}</p>
+//                   <p>Date Joined: {user.dateJoined}</p>
+//                   <button onClick={() => handleEditClick(user)}>Edit</button>
+//                   <button onClick={() => handleDeleteUser(user.id)}>Delete</button>
+//                 </>
+//               )}
+//             </li>
+//           ))
+//         ) : (
+//           <p>No users available</p>
+//         )}
+//       </ul>
+//     </div>
+//   );
+// };
+
+// export default Users;
 
 
 

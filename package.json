@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "concurrently": "^9.1.2"
   },
   "scripts": {
@@ -10,6 +11,7 @@
     "install-all": "npm install --prefix frontend && npm install --prefix backend"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "axios": "^1.8.4",
     "bootstrap": "^5.3.3",
     "json-server-auth": "^2.1.0",
