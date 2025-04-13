@@ -16,7 +16,7 @@
   /* Add some padding to the top to prevent content from being scrunched at the top */
   .welcome-container {
     padding-top: 160px; /* Adds padding at the top for spacing */
-    width: 100%;
+    width: 100vw;
     margin: 0 auto; /* Center align the content */
   }
 
@@ -130,7 +130,7 @@
 
   /* Button styles for the weather page */
   .btn-info {
-    width: 250px;
+    width: 950px;
   }
 
   /* Footer Styles */
@@ -192,8 +192,6 @@
   transform: scale(1.03); /* Slight zoom effect */
   color: rgba(255, 255, 255, 1); /* Pure white on hover for emphasis */
 }
-
-
 
 .music-description {
   font-size: 10px; /* Smaller description text */

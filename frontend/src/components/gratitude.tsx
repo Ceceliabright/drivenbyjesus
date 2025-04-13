@@ -20,7 +20,7 @@ const Gratitude: React.FC = () => {
 
   // useEffect to load data when the component mounts
   useEffect(() => {
-    AOS.init({ duration: 1200, once: false }); // Initialize AOS (Animate on Scroll) for animations
+    AOS.init({ duration: 2000, once: false }); // Initialize AOS (Animate on Scroll) for animations
 
     setLoading(true); // Set loading to true while fetching data
     fetch('http://localhost:5000/gratitudes') // Fetch gratitude list from API
@@ -128,28 +128,28 @@ const Gratitude: React.FC = () => {
   return (
     <div
       style={{
-        paddingTop: "1400px",
+        paddingTop: "1840px",
         backgroundImage: 'url("/images/sunrise.png")',
         backgroundSize: 'cover',
-        backgroundPosition: 'Top-center',
+        backgroundPosition: 'top center',
         backgroundAttachment: 'fixed',
         minHeight: '100vh',
+        width: '100vw',
         position: 'relative',
       }}
     >
-    
-      
       <div
         className="gratitude-card p-4 rounded shadow-lg"
         style={{
           fontStyle: 'italic',
-          fontSize: '1.1em',
+          fontSize: '2.1em',
           textAlign: 'center',
           backgroundColor: 'rgba(0, 0, 0, 0.3)',
           background: 'rgba(0, 0, 0, 0.3)', // Translucent background
           color: 'white',
           marginBottom: '60px',
-          maxWidth: '1200px',
+          width: '100vw',
+          // maxWidth: '1200px',
           animation: 'moveCard 3s ease-in-out infinite',
         }}
         data-aos="slide-up"
@@ -158,30 +158,56 @@ const Gratitude: React.FC = () => {
           <div
             className="p-4 rounded"
             style={{
+              fontStyle: 'italic', fontSize: '1.1em',
               backgroundColor: 'rgba(42, 74, 62, 0.5)',
               color: 'white',
+              width: 'wv100',
               marginBottom: '60px',
               animation: 'moveVerse 3s ease-in-out infinite', //Smooth animation for the verse
-
             }}
             data-aos="slide-up"
           >
-            {/* <h3>What God Says About Gratitude</h3> */}
+            {/* <h3>Click Here to See What God Says About Gratitude</h3> */}
             <blockquote style={{ fontStyle: 'italic', fontSize: '1.1em' }}>"{currentVerse.verse}"</blockquote>
             <p>{currentVerse.reference}</p>
-            <button className="btn btn-secondary" onClick={reloadVerse}>What else God says about gratitude</button>
+            <button
+              type="submit"
+              className="btn btn-secondary"
+              onClick={reloadVerse}
+              style={{
+                padding: '12px',
+                backgroundColor: '#445b48', //  color
+                color: 'white',
+                border: '1px solid white',
+                borderRadius: '5px',
+                fontSize: '1.1rem',
+                cursor: 'pointer',
+                transition: 'background-color 0.3s',
+                marginTop: '10px',
+              }}
+            >Click Here To See What else God says about gratitude
+            </button>
           </div>
         )}
-
-        <form onSubmit={handleSubmit} data-aos="flip-up">
+        <form onSubmit={handleSubmit}
+          data-aos="flip-up"
+          style={{
+            width: '90vw',
+            margin: '20px auto', // Optional: Centers the form
+            // padding: '20px', // Optional: Adds some padding
+          }}
+        >
           <div className="mb-3">
             <label className="form-label">I am grateful to God for:</label>
-            <input
-              type="text"
+            <textarea
+              placeholder="I am grateful for:"
               value={item}
               onChange={(e) => setItem(e.target.value)}
               className="form-control"
-              style={{ backgroundColor: '#F1F8E9', border: '2px solid #4CAF50' }}
+              style={{
+                backgroundColor: '#F1F8E9',
+                border: '2px solid #4CAF50'
+              }}
             />
           </div>
 
@@ -189,15 +215,37 @@ const Gratitude: React.FC = () => {
             <label className="form-label">I am grateful because:</label>
             <input
               type="text"
+              placeholder="Because:"
               value={reason}
               onChange={(e) => setReason(e.target.value)}
               className="form-control"
-              style={{ backgroundColor: '#F1F8E9', border: '2px solid #4CAF50' }}
+              style={{
+                backgroundColor: '#F1F8E9',
+                border: '2px solid #4CAF50'
+              }}
             />
           </div>
           {formError && <p className="text-secondary">{formError}</p>}
 
-          <button type="submit" className="btn btn-secondary">Add Gratitude</button>
+          <button
+            type="submit"
+            className="btn btn-secondary"
+            onClick={reloadVerse}
+            style={{
+              padding: '12px',
+              backgroundColor: '#445b48', // Blue color
+              color: 'white',
+              border: '1px solid white',
+              borderRadius: '5px',
+              fontSize: '1.1rem',
+              cursor: 'pointer',
+              // width: '80vw',
+              transition: 'background-color 0.3s',
+              marginTop: '10px',
+            }}
+          >
+            Add Gratitude
+          </button>
         </form>
 
         <h1 className="display-4" data-aos="fade-down">Gratitude List</h1>
@@ -207,13 +255,13 @@ const Gratitude: React.FC = () => {
             {gratitudes.length > 0 ? (
               gratitudes.slice().reverse().map((gratitude) => (
                 <div key={gratitude.id} className="col-md-6 col-lg-4 mb-4">
+
+
                   {/* <div className="card bg-dark text-white h-100 shadow-lg border border-success rounded-4"> */}
-
-
                   <div
                     className="card h-100 shadow-lg"
                     style={{
-                      backgroundColor: 'rgba(255, 255, 255, 0.1)',  // Translucent white background
+                      backgroundColor: 'rgba(35, 26, 26, 0.1)',  // Translucent white background
                       backdropFilter: 'blur(10px)',                // Frosted-glass effect
                       border: '2px solid rgba(0, 128, 0, 0.5)',    // Semi-transparent green border
                       color: 'white',                              // White text color

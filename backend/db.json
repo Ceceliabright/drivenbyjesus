@@ -1,125 +1,89 @@
 {
   "prayers": [
     {
-      "prayer": "200 edited",
-      "reason": "200",
-      "date": "3/27/2025, 2:00:30 PM",
+      "prayer": "That God's love is magnified in all of us ",
+      "reason": "Because love is wonderful",
+      "date": "4/12/2025, 7:28:07 PM",
       "id": 1
     },
     {
-      "prayer": "212update",
-      "reason": "212",
-      "date": "3/27/2025, 7:55:55 PM",
+      "prayer": "prayer 2",
+      "reason": "12",
+      "date": "4/12/2025, 7:36:24 PM",
       "id": 2
     },
     {
-      "prayer": "755",
-      "reason": "755",
-      "date": "3/27/2025, 7:55:20 PM",
+      "prayer": "my life is so highly blessed",
+      "reason": "my love of my life",
+      "date": "4/12/2025, 7:37:25 PM",
       "id": 3
     },
     {
-      "prayer": "801",
-      "reason": "801",
-      "date": "3/27/2025, 8:01:07 PM",
+      "prayer": "God's love is so wonderful",
+      "reason": "It's beyond our wildest imagination",
+      "date": "4/12/2025, 7:37:09 PM",
       "id": 4
-    },
-    {
-      "prayer": "please help me more",
-      "reason": "because i am nothing and no one without you",
-      "date": "4/8/2025, 11:08:38 AM",
-      "id": 6
-    },
-    {
-      "prayer": "i love jesus so much Jesus is wonderful",
-      "reason": "because he is awesome",
-      "date": "4/8/2025, 11:40:17 AM",
-      "id": 7
-    },
-    {
-      "prayer": "0124 updated",
-      "reason": "0124",
-      "date": "4/8/2025, 1:30:16 PM",
-      "id": 8
     }
   ],
   "gratitudes": [
     {
-      "item": "everything",
-      "reason": "He is great",
-      "date": "4/4/2025, 7:27:36 PM",
+      "item": "Everything is great & Jesus is great",
+      "reason": "I love Jesus",
+      "date": "4/10/2025, 1:29:15 PM",
+      "id": 1
+    },
+    {
+      "item": "All things from God",
+      "reason": "Everything is from God",
+      "date": "4/12/2025, 6:02:06 PM",
       "id": 2
     },
     {
-      "item": "This wonderful existence",
-      "reason": "for everything",
-      "date": "4/8/2025, 12:44:36 PM",
+      "item": "all things provided by God",
+      "reason": "He is awesome",
+      "date": "4/12/2025, 6:37:16 PM",
       "id": 3
     },
     {
-      "item": "Great weather",
-      "reason": "I like the warm weather",
-      "date": "4/4/2025, 7:36:02 PM",
+      "item": "So many blessings",
+      "reason": "i am highly blessed",
+      "date": "4/12/2025, 7:10:00 PM",
       "id": 4
     },
     {
-      "item": "my life, my love, my family, my friends, having a my",
-      "reason": "my means that I am worthy of having life, love, family, friends, and a sense of self",
-      "date": "4/4/2025, 7:42:34 PM",
+      "item": "so much love",
+      "reason": "it is good all the time",
+      "date": "4/12/2025, 7:19:43 PM",
       "id": 5
-    },
-    {
-      "item": "I am grateful because God is good",
-      "reason": "he's good all of the time",
-      "date": "4/8/2025, 2:29:46 PM",
-      "id": 6
-    },
-    {
-      "item": "my love",
-      "reason": "my family is love",
-      "date": "4/8/2025, 2:32:00 PM",
-      "id": 7
-    },
-    {
-      "item": "everything",
-      "reason": "all is good",
-      "date": "4/8/2025, 2:35:57 PM",
-      "id": 8
     }
   ],
   "users": [
     {
       "email": "1234@gmail.com",
-      "password": "$2a$10$Tyg8JwtF2KtWlH1gCVLC1eYSRuCvE4d9cnCJ3fVeXtIqHkGhTsAxm",
+      "password": "$2a$10$DXsrvNiV7MXMxBgv1F5c6.rYs.B1d8ten8uwReiYRDHbOPjkBVFK2",
       "username": "CC",
       "id": 1
     },
     {
       "email": "12345@gmail.com",
-      "password": "$2a$10$tFwL5JzH1NmJtTQGYNg/WuwXnAPhgD0yL2lCXrBbawTUa1ElcGxiy",
-      "username": "CC",
+      "password": "$2a$10$B/qkRAkK/5w0vOEN7/snauOaSauFdsFb5lE9p/6aBw6npe5T3aZpe",
+      "username": "BB",
+      "dateJoined": "4/12/2025, 7:56:16 PM",
       "id": 2
     },
     {
-      "email": "1222@gmail.com",
-      "password": "$2a$10$a0eiR7jVvbCelGRWZHZNnOB8yyXqm3Xm2d5sb8QsGTEOvha8R5biy",
-      "username": "CC",
-      "dateJoined": "4/3/2025, 1:43:47 PM",
+      "email": "AAAA@gmail.com",
+      "password": "$2a$10$OmvCsQTTJlXMGFE0kN5JBeG7KtWQfgnDZt.MmQOnIEDjwzwtk2iia",
+      "username": "AA",
+      "dateJoined": "4/12/2025, 7:57:09 PM",
       "id": 3
     },
     {
-      "email": "7777@gmail.com",
-      "password": "$2a$10$vlaj0eU/8AskCJ4MWANRFe1hNnRr4UX65dyxaKvOWn4XxF9KZZzqW",
-      "username": "7777",
-      "dateJoined": "4/7/2025, 9:59:00 AM",
+      "email": "2222@gmail.com",
+      "password": "$2a$10$S./gCA0hW2bcqCSqQNFf3u7KlO.sjza1qe/PXuwvZvyL1r/fV8zjC",
+      "username": "AA",
+      "dateJoined": "4/12/2025, 9:56:00 PM",
       "id": 4
-    },
-    {
-      "email": "0238@gmail.com",
-      "password": "$2a$10$En.J0lqsJkgUXBsN.U2BJesDIyKGjMEJOSMNUHuylVc4i3n62eOIq",
-      "username": "CC",
-      "dateJoined": "4/8/2025, 2:38:34 PM",
-      "id": 5
     }
   ],
   "bibleVersesLove": [

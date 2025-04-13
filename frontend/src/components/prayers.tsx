@@ -138,9 +138,10 @@ const Prayers: React.FC = () => {
         backgroundPosition: 'top center',
         backgroundAttachment: 'fixed',
         minHeight: '100vh',
+        width: '100vw',
         position: 'relative',
         backgroundRepeat: 'no-repeat',
-        paddingTop: '80px', // 👈 Add this line (adjust the number as needed)
+        paddingTop: '8px', // 👈 Add this line (adjust the number as needed)
       }}
     >
       {error && <p style={{ color: 'red' }}>{error}</p>}
@@ -168,16 +169,22 @@ const Prayers: React.FC = () => {
             // style={{
             fontStyle: 'italic',
             fontSize: '1.1em',
+            width: '100vw',
             backgroundColor: 'rgba(42, 74, 62, 0.5)', // Similar translucent background
             color: 'white',
             marginBottom: '60px',
+            marginTop: '990px',
             animation: 'moveVerse 3s ease-in-out infinite', // Smooth animation for the verse
             padding: '10px',
-            paddingTop: '900px',
+            paddingTop: '150px',
             // backgroundColor: 'lightgreen',
             borderRadius: '5px',
+            textAlign: 'center',
           }}
-        >
+        data-aos="slide-up"
+      >
+
+
 
           {/* <blockquote style={{ fontStyle: 'italic', fontSize: '30px' }}> */}
 
@@ -189,6 +196,10 @@ const Prayers: React.FC = () => {
               border: '1px solid white', /* Thin white border */
               borderRadius: '8px', /* Rounded corners */
               padding: '10px', /* Optional padding for better spacing */
+              backgroundColor: 'rgba(42, 74, 62, 0.8)', // Slightly darker translucent background
+              margin: '20px auto', // Centers the blockquote with proper spacing
+              maxWidth: '100%', // Ensures readability on wider screens
+              width: '100vw',
             }}
           >
             "{currentVerse.verse}"
@@ -209,10 +220,34 @@ const Prayers: React.FC = () => {
           </button>
         </div>
       )}
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '100%',
+          // height: '100vh',
+          backgroundColor: 'rgba(0, 0, 0, 0.3)', // Translucent background
+          borderRadius: '10px',
+          border: '2px solid white', // Thin white border
+          padding: '20px',
+          boxSizing: 'border-box',
+        }}
+      >
 
-      <div>
-        <input
-          type="text"
+        <label style={{ color: 'white', justifyContent: "center" }}>
+       
+        <p>
+          {/* <strong>Philippians 4:6-7:</strong> <br /> */}
+          "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus."
+          <br></br>
+          What’s on your heart today?
+
+        </p>
+        </label>
+        <br></br>
+        <textarea
           placeholder="My prayer"
           value={newPrayer}
           onChange={(e) => setNewPrayer(e.target.value)}
@@ -221,10 +256,16 @@ const Prayers: React.FC = () => {
             marginRight: '5px',
             borderRadius: '5px',
             border: '1px solid #4CAF50',
+            width: '100%',
+            maxWidth: '100%',
+            resize: 'vertical', // Allow user to resize vertically
+            marginBottom: '15px',
           }}
         />
-        <input
-          type="text"
+        <br></br>
+        <label style={{ color: 'white' }}>Why are you praying? Share the purpose behind your prayer.</label>
+        <br></br>
+        <textarea
           placeholder="My reason"
           value={newReason}
           onChange={(e) => setNewReason(e.target.value)}
@@ -233,8 +274,12 @@ const Prayers: React.FC = () => {
             marginRight: '5px',
             borderRadius: '5px',
             border: '1px solid #4CAF50',
+            width: '100%', // Make input take up full width
+            maxWidth: '100%', // Max width to prevent it from becoming too wide
+            marginBottom: '15px', // Spacing between inputs
           }}
         />
+        <br></br>
         <button
           onClick={handleAddPrayer}
           style={{
@@ -243,27 +288,42 @@ const Prayers: React.FC = () => {
             color: 'white',
             border: 'none',
             borderRadius: '5px',
+            width: '100%', // Make button take up full width
+            maxWidth: '600px', // Max width to match input
+            cursor: 'pointer',
+
+
           }}
         >
           Add Prayer
         </button>
-        <h1>Prayer List</h1>
+</div>
+<div>
+
+
+        <br></br>
+        <br></br>
+        <h1 style={{ textAlign: 'center' }}>Prayer List</h1>
       </div>
 
-      <ul>
+      <ul
+  style={{
+    display: 'flex', // Flexbox for row layout
+    flexWrap: 'wrap', // Allows wrapping to the next line if there isn't enough space
+    gap: '10px', // Adds spacing between items
+    padding: 0, // Removes default padding of <ul>
+    listStyle: 'none', // Removes default bullet points
+  }}
+>
+
         {prayers.slice().reverse().map((prayerItem) => (
           <li
             key={prayerItem.id}
             style={{
               marginBottom: '10px',
               padding: '10px',
-
-       border: '1px solid white', /* Thin white border */
-          borderRadius: '8px', /* Rounded corners */
-
-
-
-
+              border: '1px solid white', /* Thin white border */
+              borderRadius: '8px', /* Rounded corners */
               backgroundColor: 'rgba(0, 0, 0, 0.3)',
               background: 'rgba(0, 0, 0, 0.3)', // Translucent background
               color: 'white',

@@ -1,0 +1,102 @@
+/* SignUp.css */
+
+/* Container for the entire sign-up form */
+.signUpContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgba(31, 27, 30, 0.1); /* Soft translucent background */
+  backdrop-filter: blur(10px); /* Adds a blur effect behind the form */
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+/* Title of the page */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 350px; /* Adjusted width for a more compact form */
+  padding: 20px;
+  background-color: rgb(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #e1e1e1; /* Soft white border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slight shadow around form */
+}
+
+/* Input fields */
+input {
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  background-color: #eef6f0; /* Slight background color to inputs */
+  transition: border-color 0.3s ease;
+}
+
+/* Input focus effect */
+input:focus {
+  border-color: #0e3114; /* Change border color when input is focused */
+  outline: none; /* Remove default outline */
+}
+
+/* Submit button */
+button {
+  padding: 12px;
+  background-color: #445b48; /* Blue color */
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #197b31; /* Darker blue on hover */
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Background image */
+.backgroundImage {
+
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  /* background-color: rgb(232, 8, 176); For a solid color */
+  /* background-image: url('background.jpg'); Optional image */
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-position: center; /* Center the image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background-image: url('../images/1.jpg');/* Update this to your background image */
+  /* background-size: cover; */
+  /* background-position: center; */
+  opacity: 0.3;
+  z-index: -1;
+  background-attachment: fixed;
+}

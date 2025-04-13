@@ -48,41 +48,34 @@ const WelcomePage: React.FC = () => {
       style={{
         backgroundImage: 'url("/images/welcomebackground.jpg")',
         backgroundSize: 'cover',
+        width: '100vw',
         backgroundPosition: 'top center',
         backgroundAttachment: 'fixed',
-
-
         border: '1px solid white', /* Thin white border */
         borderRadius: '8px', /* Rounded corners */
         padding: '10px', /* Optional padding for better spacing */
-
-
         minHeight: '100vh',
         position: 'relative',
         backgroundRepeat: 'no-repeat',
-        paddingTop: '80px', // 👈 Add this line (adjust the number as needed)
+        paddingTop: '820px', // 👈 Add this line (adjust the number as needed)
 
       }}
     >
-      Translucent Overlay
+      {/* Translucent Overlay */}
       <div
-        // style={{
-
-
-        //   border: '1px solid white', /* Thin white border */
-        //   borderRadius: '8px', /* Rounded corners */
-        //   padding: '10px', /* Optional padding for better spacing */
-
-
-        //   position: 'absolute',
-        //   top: 0,
-        //   left: 0,
-        //   width: '100%',
-        //   height: '100%',
-        //   background: 'rgba(0, 0, 0, 0.3)', // Black overlay with opacity
-        //   filter: 'blur(5px)', // Optional: blur the background
-        //   zIndex: -1, // Make sure the overlay is behind the content
-        // }}
+        style={{
+          border: '1px solid white', /* Thin white border */
+          borderRadius: '8px', /* Rounded corners */
+          padding: '10px', /* Optional padding for better spacing */
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          background: 'rgba(49, 69, 49, 0.9)', // Black overlay with opacity
+          filter: 'blur(5px)', // Optional: blur the background
+          zIndex: -1, // Make sure the overlay is behind the content
+        }}
       ></div>
 
       <div className="container text-center py-5 py-md-4 py-lg-3" style={{ paddingBottom: '60px' }}>
@@ -92,19 +85,23 @@ const WelcomePage: React.FC = () => {
           style={{
             background: 'rgba(0, 0, 0, 0.6)', // Translucent background
             color: 'white',
-
-
-       border: '1px solid white', /* Thin white border */
-          borderRadius: '8px', /* Rounded corners */
-          padding: '10px', /* Optional padding for better spacing */
-
-
-
+            border: '1px solid white', /* Thin white border */
+            borderRadius: '8px', /* Rounded corners */
+            padding: '10px', /* Optional padding for better spacing */
             animation: 'moveCard 3s ease-in-out infinite',
           }}
           data-aos="fade-up"
         >
-          <h1 className="display-4" data-aos="fade-down">
+          <h1
+            className="display-4"
+            data-aos="fade-down"
+            style={{
+              color: 'white', // Set text color to white
+              fontSize: '3.5rem', // Adjust font size (use rem, em, px, or % as needed)
+              fontWeight: 'bold', // Optional: Make the text bold
+              textShadow: '2px 2px 5px rgba(0, 0, 0, 0.5)' // Optional: Add a shadow for better contrast
+            }}
+          >
             Welcome to Total Wellness
           </h1>
           <p className="lead" data-aos="zoom-in">
@@ -113,44 +110,131 @@ const WelcomePage: React.FC = () => {
 
           <div className="my-5">
             <h2 className="h3" data-aos="fade-up">
-              Our Features
+              <h2>Our Features</h2>
+
+              <ul className="list-unstyled" style={{ display: 'grid', gap: '16px', padding: 0 }}>
+                <li
+                  data-aos="fade-left"
+                  data-aos-delay="1000"
+                  style={{
+                    border: '1px solid white',
+                    borderRadius: '8px',
+                    padding: '20px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    color: 'white',
+                    fontSize: '18px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  🌟 Enjoy holy scriptures about God's love for you. ✝️
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-delay="400"
+                  style={{
+                    border: '1px solid white',
+                    borderRadius: '8px',
+                    padding: '20px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    color: 'white',
+                    fontSize: '18px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  📖 Build your faith by recording your prayers. 🙏
+                </li>
+                <li
+                  data-aos="fade-left"
+                  data-aos-delay="200"
+                  style={{
+                    border: '1px solid white',
+                    borderRadius: '8px',
+                    padding: '20px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    color: 'white',
+                    fontSize: '18px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  ✨ List your blessings and document your gratitude. 💝
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-delay="400"
+                  style={{
+                    border: '1px solid white',
+                    borderRadius: '8px',
+                    padding: '20px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    color: 'white',
+                    fontSize: '18px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  📜 Stay motivated with daily reflections and faith-building prayers. 🙌
+                </li>
+                <li
+                  data-aos="fade-left"
+                  data-aos-delay="600"
+                  style={{
+                    border: '1px solid white',
+                    borderRadius: '8px',
+                    padding: '20px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    color: 'white',
+                    fontSize: '18px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  🏆 But seek ye first the kingdom of God, and His righteousness; and all these things shall be added unto you. 🌿
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-delay="600"
+                  style={{
+                    border: '1px solid white',
+                    borderRadius: '8px',
+                    padding: '20px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    color: 'white',
+                    fontSize: '18px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  💪 2 Timothy 1:7: "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind." 🕊️
+                </li>
+              </ul>
             </h2>
-            <ul className="list-unstyled">
-              <li data-aos="fade-left" data-aos-delay="200">⭐ Track your Gratitude and Prayers</li>
-              <li data-aos="fade-right" data-aos-delay="400">📖 Stay motivated with daily reflections</li>
-              <li data-aos="fade-left" data-aos-delay="600">🏆 Manage your wellness goals effortlessly</li>
-              <li data-aos="fade-right" data-aos-delay="200">⭐ Track your Nutritional Macros and Physical Activity</li>
-              <li data-aos="fade-left" data-aos-delay="400">📖 Stay motivated with daily reflections</li>
-              <li data-aos="fade-right" data-aos-delay="600">🏆 Manage your emotional wellness goals effortlessly</li>
-
-
-
-
-
-            </ul>
           </div>
         </div>
 
         {/* Bible Verse Section */}
         <div
           id="dailyVersesWrapper"
-          className={`p-4 rounded shadow-sm mb-4 mb-md-5 mb-lg-6 verse-container ${
-            animate ? 'animate-verse' : ''
-          }`}
+          className={`p-4 rounded shadow-sm mb-4 mb-md-5 mb-lg-6 verse-container ${animate ? 'animate-verse' : ''
+            }`}
           style={{
             fontStyle: 'italic',
             fontSize: '1.1em',
-
-
-       border: '1px solid white', /* Thin white border */
-          borderRadius: '8px', /* Rounded corners */
-          padding: '10px', /* Optional padding for better spacing */
-
-
-
+            border: '10px solid white', /* Thin white border */
+            borderRadius: '10px', /* Rounded corners */
+            padding: '10px', /* Optional padding for better spacing */
             backgroundColor: 'rgba(42, 74, 62, 0.5)', // Similar translucent background
             color: 'white',
             marginBottom: '60px',
+            width: '80vw',
             animation: 'moveVerse 3s ease-in-out infinite', // Smooth animation for the verse
           }}
           data-aos="slide-up"
@@ -176,11 +260,14 @@ const WelcomePage: React.FC = () => {
           className="btn btn-light btn-lg mx-2 my-4"
           style={{
             backgroundColor: 'rgba(42, 74, 62, 0.5)', // Similar translucent background
+            border: '10px solid white', /* Thin white border */
+            borderRadius: '8px', /* Rounded corners */
             color: 'white',
-            width: '250px',
+            width: '900px',
           }}
-          data-aos="zoom-in"
         >
+          Click Here for
+          <br></br>
           More of God's love for you
         </button>
 
@@ -191,12 +278,12 @@ const WelcomePage: React.FC = () => {
             style={{
               backgroundColor: 'rgba(42, 74, 62, 0.5)', // Similar translucent background
               color: 'white',
-              width: '250px',
+              width: '300px',
             }}
-            data-aos="zoom-in"
+
           >
             <Link to="/signin" className="custom-Link">
-             Login
+              Login Here
             </Link>
           </button>
         </div>
@@ -206,12 +293,12 @@ const WelcomePage: React.FC = () => {
           style={{
             backgroundColor: 'rgba(193, 213, 206, 0.5)', // Similar translucent background
             // color: 'green',
-            width: '250px',
+            width: '300px',
           }}
           data-aos="zoom-in"
         >
           <Link to="/signup" className="text-decoration-none">
-            Register
+            Register Here
           </Link>
         </button>
 
